@@ -22,6 +22,9 @@ from collections import defaultdict
 import networkx as nx
 from flask import Flask, jsonify, request
 import subprocess
+import threading
+import time
+import random
 
 # ── Configuration ────────────────────────────────────────────────────────────
 TELEMETRY_PATH = "telemetry.json"
@@ -326,7 +329,7 @@ def find_lateral_movement_chains(window_minutes=DEFAULT_WINDOW_MINUTES,
     6. Return top-N by total_score.
     """
     window = timedelta(minutes=window_minutes)
-    seen_paths = {}  # path_key -> best scored chain
+    seen_paths = {}
 
     anchor_events = [e for e in EVENTS if e["event_type"] in _CRITICAL_TYPES]
 
@@ -394,14 +397,18 @@ def find_lateral_movement_chains(window_minutes=DEFAULT_WINDOW_MINUTES,
                 if path_key not in seen_paths or score_info["total_score"] > seen_paths[path_key]["score"]["total_score"]:
                     # Create json-serializable events dict (removing datetime object)
                     serializable_events = []
+                    users_involved = set()
                     for e in path_events:
                         ev_dict = {k: v for k, v in e.items() if k != "_ts"}
                         ev_dict["timestamp"] = e["_ts"].isoformat()
+                        if "user" in ev_dict:
+                            users_involved.add(ev_dict["user"])
                         serializable_events.append(ev_dict)
                         
                     seen_paths[path_key] = {
                         "chain": path,
                         "events": serializable_events,
+                        "users": list(users_involved),
                         "score": score_info,
                     }
 
@@ -587,6 +594,9 @@ def index():
             "GET /api/ground-truth":       "Known attack ground-truth",
             "GET /api/events":             "Filtered event list (?device_id, ?event_type)",
             "GET /api/device/<device_id>": "Device detail + neighbourhood + events",
+            "POST /api/simulation/start":  "Start continuous background simulation",
+            "POST /api/simulation/stop":   "Stop background simulation",
+            "GET /api/simulation/status":  "Check background simulation status",
         },
         "attack_paths_params": {
             "window_minutes": f"int, default {DEFAULT_WINDOW_MINUTES}",
@@ -594,6 +604,7 @@ def index():
             "min_chain_len":  f"int, default {MIN_CHAIN_LEN}",
         },
     })
+
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────

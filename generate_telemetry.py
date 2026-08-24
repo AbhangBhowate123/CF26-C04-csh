@@ -25,6 +25,15 @@ FLOORS = [1, 2, 3, 4, 5]
 
 DEVICE_TYPES = ["camera", "badge_reader", "workstation", "server", "iot_sensor", "router"]
 
+OPERATORS = [
+    "Operator Alpha-1",
+    "Operator Bravo-2",
+    "Operator Charlie-3",
+    "Operator Delta-4",
+    "Operator Echo-5",
+    "Operator Foxtrot-6"
+]
+
 NETWORK_SEGMENTS = {
     1: "vlan-servers",
     2: "vlan-iot",
@@ -136,8 +145,12 @@ def generate_background_noise(devices, base_time, window_minutes, count=300):
         if event_type == "network_heartbeat" and device["connected_devices"]:
             target = random.choice(device["connected_devices"])
 
+        extra = None
+        if event_type == "login":
+            extra = {"user": random.choice(OPERATORS)}
+
         events.append(
-            make_event(event_type, device["id"], device["floor"], target, ts)
+            make_event(event_type, device["id"], device["floor"], target, ts, extra=extra)
         )
     return events
 
@@ -203,13 +216,14 @@ def generate_attack_scenario(devices, base_time, window_minutes):
     # Step 3: suspicious auth attempt on the server (arrives slightly
     # out of order relative to t2, to simulate real-world jitter)
     t3 = t2 + timedelta(seconds=random.uniform(-15, 45))
+    attack_user = random.choice(OPERATORS)
     events.append(
         make_event(
             "suspicious_auth_attempt",
             server["id"],
             server["floor"],
             timestamp=t3,
-            extra={"auth_result": "failed_then_succeeded", "attempts": 4},
+            extra={"auth_result": "failed_then_succeeded", "attempts": 4, "user": attack_user},
         )
     )
 
@@ -221,7 +235,7 @@ def generate_attack_scenario(devices, base_time, window_minutes):
             server["id"],
             server["floor"],
             timestamp=t4,
-            extra={"escalated_to": "admin"},
+            extra={"escalated_to": "admin", "user": attack_user},
         )
     )
 
@@ -232,6 +246,7 @@ def generate_attack_scenario(devices, base_time, window_minutes):
         "attacker_id": attacker["id"],
         "server_id": server["id"],
         "attack_window": [t1.isoformat(), t4.isoformat()],
+        "attack_user": attack_user,
     }
 
 

@@ -60,6 +60,20 @@ export default function ThreatAssessment({ activePath }: { activePath: any }) {
         )}
       </div>
       <div className="mt-auto relative z-10 w-full">
+        {primaryPath && primaryPath.users && primaryPath.users.length > 0 && (
+          <div className="mb-4">
+            <h4 className="font-label-caps text-label-caps text-on-surface-variant mb-2 border-b border-outline-variant pb-1">INVOLVED OPERATORS</h4>
+            <div className="flex flex-wrap gap-2">
+              {primaryPath.users.map((user: string, idx: number) => (
+                <span key={idx} className="bg-[rgba(255,255,255,0.05)] text-primary-fixed px-2 py-1 rounded text-xs font-data-code border border-outline-variant flex items-center">
+                  <span className="material-symbols-outlined text-[12px] mr-1">person</span>
+                  {user}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         <h4 className="font-label-caps text-label-caps text-on-surface-variant mb-2 border-b border-outline-variant pb-1">ANALYSIS VECTORS</h4>
         <ul className="font-data-code text-data-code text-on-surface flex flex-col gap-2 w-full">
           {uniqueEventTypes.length > 0 ? (

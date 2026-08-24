@@ -5,7 +5,6 @@ echo ============================================
 
 echo.
 echo [1/3] Generating fresh telemetry data...
-cd backend
 python generate_telemetry.py
 if errorlevel 1 (
     echo ERROR: Failed to generate telemetry data.
@@ -15,7 +14,7 @@ if errorlevel 1 (
 
 echo.
 echo [2/3] Starting Flask backend in a new window...
-start "Backend - Flask" cmd /k "cd /d %~dp0backend && python app.py"
+start "Backend - Flask" cmd /k "cd /d %~dp0 && python app.py"
 
 echo.
 echo [3/3] Starting Next.js frontend in a new window...
