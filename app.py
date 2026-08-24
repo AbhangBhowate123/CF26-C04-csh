@@ -23,9 +23,6 @@ import networkx as nx
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import subprocess
-import threading
-import time
-import random
 import os
 import requests
 from dotenv import load_dotenv
@@ -663,9 +660,6 @@ def index():
             "GET /api/ground-truth":       "Known attack ground-truth",
             "GET /api/events":             "Filtered event list (?device_id, ?event_type)",
             "GET /api/device/<device_id>": "Device detail + neighbourhood + events",
-            "POST /api/simulation/start":  "Start continuous background simulation",
-            "POST /api/simulation/stop":   "Stop background simulation",
-            "GET /api/simulation/status":  "Check background simulation status",
         },
         "attack_paths_params": {
             "window_minutes": f"int, default {DEFAULT_WINDOW_MINUTES}",
