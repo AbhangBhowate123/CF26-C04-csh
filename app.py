@@ -21,6 +21,7 @@ from collections import defaultdict
 
 import networkx as nx
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import subprocess
 import threading
 import time
@@ -120,6 +121,7 @@ PRIVILEGE_EVENTS = {
 assert abs(sum(WEIGHTS.values()) - 1.0) < 1e-9, "Weights must sum to 1.0"
 
 app = Flask(__name__)
+CORS(app)
 
 DEVICES = []
 EVENTS = []

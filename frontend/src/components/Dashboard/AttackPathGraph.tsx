@@ -8,9 +8,11 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
   const [deviceDetails, setDeviceDetails] = useState<any>(null);
   const [graphData, setGraphData] = useState<{ nodes: any[], edges: any[] } | null>(null);
 
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
   // Re-fetch graph when attackPaths change (e.g., on simulation)
   useEffect(() => {
-    fetch('/api/graph')
+    fetch(`${API_BASE}/api/graph`)
       .then(res => res.json())
       .then(data => setGraphData(data))
       .catch(console.error);
@@ -20,7 +22,7 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
 
   useEffect(() => {
     if (activeDevice) {
-      fetch(`/api/device/${activeDevice}`)
+      fetch(`${API_BASE}/api/device/${activeDevice}`)
         .then(res => res.json())
         .then(data => setDeviceDetails(data))
         .catch(console.error);

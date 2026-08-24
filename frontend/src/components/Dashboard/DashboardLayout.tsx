@@ -30,6 +30,8 @@ export default function DashboardLayout() {
   const originalTitle = useRef("Aegis Mission Control");
   const audioCtxRef = useRef<AudioContext | null>(null);
 
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
   const playAlertSound = (type: 'attack' | 'lockdown_on' | 'lockdown_off') => {
     if (isMuted) return;
     try {
@@ -128,7 +130,7 @@ export default function DashboardLayout() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/attack-paths?top_n=3");
+      const response = await fetch(`${API_BASE}/api/attack-paths?top_n=3`);
       if (response.ok) {
         const data = await response.json();
         if (data.attack_paths && data.attack_paths.length > 0) {
@@ -154,7 +156,7 @@ export default function DashboardLayout() {
   const handleSimulateAttack = async () => {
     setIsSimulating(true);
     try {
-      const res = await fetch("/api/trigger-attack", { method: "POST" });
+      const res = await fetch(`${API_BASE}/api/trigger-attack`, { method: "POST" });
       if (res.ok) {
         // Fetch new data immediately
         const newPaths = await fetchData();

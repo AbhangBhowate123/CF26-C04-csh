@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export default function FacilitySchematic({ activePath, isLockdownActive = false }: { activePath: any, isLockdownActive?: boolean }) {
   const [deviceFloors, setDeviceFloors] = useState<Record<string, number>>({});
   const [deviceTypes, setDeviceTypes] = useState<Record<string, string>>({});
@@ -8,7 +10,7 @@ export default function FacilitySchematic({ activePath, isLockdownActive = false
   const [pathLines, setPathLines] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("/api/graph")
+    fetch(`${API_BASE}/api/graph`)
       .then(r => r.json())
       .then(data => {
         const floorMap: Record<string, number> = {};
