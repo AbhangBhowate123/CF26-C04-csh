@@ -25,6 +25,51 @@ import subprocess
 import threading
 import time
 import random
+import os
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
+ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
+ALERT_WHATSAPP_NUMBER = os.getenv("ALERT_WHATSAPP_NUMBER")
+
+print(f"DEBUG: Loaded ULTRAMSG_INSTANCE_ID={ULTRAMSG_INSTANCE_ID}")
+print(f"DEBUG: Loaded ALERT_WHATSAPP_NUMBER={ALERT_WHATSAPP_NUMBER}")
+
+LAST_NOTIFIED_ATTACK_PATH = None
+
+def send_whatsapp_alert(score, path_chain, entry_floor, target_floor):
+    if not all([ULTRAMSG_INSTANCE_ID, ULTRAMSG_TOKEN, ALERT_WHATSAPP_NUMBER]) or ALERT_WHATSAPP_NUMBER == "<my WhatsApp number with country code, no + or spaces>":
+        print("UltraMsg credentials not fully configured. Skipping WhatsApp alert.")
+        return
+
+    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
+    
+    body = (
+        f"🚨 CRITICAL THREAT DETECTED - Score: {score}/10. "
+        f"Attack path: {path_chain[0]} (Floor {entry_floor}) -> {path_chain[-1]} (Floor {target_floor}). "
+        f"Check Aegis Mission Control dashboard immediately."
+    )
+    
+    payload = {
+        "token": ULTRAMSG_TOKEN,
+        "to": ALERT_WHATSAPP_NUMBER if ALERT_WHATSAPP_NUMBER.startswith("+") else f"+{ALERT_WHATSAPP_NUMBER}",
+        "body": body
+    }
+    
+    print(f"DEBUG: Sending WhatsApp alert to {url}")
+    # Safely print body to avoid UnicodeEncodeError on Windows consoles with the emoji
+    safe_body = body.encode('ascii', 'replace').decode('ascii')
+    print(f"DEBUG: Payload to={ALERT_WHATSAPP_NUMBER}, body='{safe_body}'")
+    
+    response = requests.post(url, data=payload, timeout=5)
+    
+    print(f"DEBUG: UltraMsg API response status={response.status_code}")
+    print(f"DEBUG: UltraMsg API response body={response.text}")
+    
+    response.raise_for_status()
 
 # ── Configuration ────────────────────────────────────────────────────────────
 TELEMETRY_PATH = "telemetry.json"
@@ -417,13 +462,16 @@ def find_lateral_movement_chains(window_minutes=DEFAULT_WINDOW_MINUTES,
         key=lambda x: x["score"]["total_score"],
         reverse=True,
     )
-    return ranked[:top_n]
+    
+    top_ranked = ranked[:top_n]
+    return top_ranked
 
 
 # ── Flask REST endpoints ──────────────────────────────────────────────────────
 
 @app.route("/api/trigger-attack", methods=["POST"])
 def trigger_attack():
+    global LAST_NOTIFIED_ATTACK_PATH
     """
     POST /api/trigger-attack
     Runs generate_telemetry.py and reloads data.
@@ -433,6 +481,25 @@ def trigger_attack():
     try:
         subprocess.run([sys.executable, script_path], check=True, capture_output=True, text=True)
         load_telemetry_data()
+        
+        # Determine the top attack path and send notification
+        chains = find_lateral_movement_chains(window_minutes=DEFAULT_WINDOW_MINUTES, min_chain_len=MIN_CHAIN_LEN, top_n=1)
+        if chains:
+            top_path_data = chains[0]
+            score_10 = top_path_data["score"]["total_score"] * 10
+            if score_10 >= 7.0:
+                top_path_key = tuple(top_path_data["chain"])
+                if top_path_key == LAST_NOTIFIED_ATTACK_PATH:
+                    print("Skipping WhatsApp alert - same attack already notified.")
+                else:
+                    entry_device = top_path_data["chain"][0]
+                    target_device = top_path_data["chain"][-1]
+                    entry_floor = DEVICE_BY_ID.get(entry_device, {}).get("floor", "?")
+                    target_floor = DEVICE_BY_ID.get(target_device, {}).get("floor", "?")
+                    
+                    send_whatsapp_alert(f"{score_10:.1f}", top_path_data["chain"], entry_floor, target_floor)
+                    LAST_NOTIFIED_ATTACK_PATH = top_path_key
+
         return jsonify({"status": "success", "message": "Telemetry regenerated and reloaded."})
     except subprocess.CalledProcessError as e:
         return jsonify({"error": "Failed to generate telemetry", "details": e.stderr}), 500
