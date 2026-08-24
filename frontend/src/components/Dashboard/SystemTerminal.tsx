@@ -1,4 +1,4 @@
-export default function SystemTerminal({ attackPaths, searchQuery = "" }: { attackPaths: any[], searchQuery?: string }) {
+export default function SystemTerminal({ activePath, searchQuery = "", customLogs = [] }: { activePath: any, searchQuery?: string, customLogs?: any[] }) {
   const formatTime = (ts: string) => {
     try {
       const date = new Date(ts);
@@ -9,6 +9,9 @@ export default function SystemTerminal({ attackPaths, searchQuery = "" }: { atta
   };
 
   const getEventStyle = (eventType: string) => {
+    if (eventType === 'system_log') {
+      return "text-error font-bold font-label-caps tracking-wide";
+    }
     if (eventType === 'privilege_escalation' || eventType === 'lateral_movement') {
       return "text-error font-bold bg-[rgba(147,0,10,0.2)] p-1 rounded pulsing-red";
     }
@@ -26,16 +29,20 @@ export default function SystemTerminal({ attackPaths, searchQuery = "" }: { atta
   };
 
   let events: any[] = [];
-  if (attackPaths) {
-    attackPaths.forEach((path: any) => {
-      events = events.concat(path.events);
-    });
+  if (activePath && activePath.events) {
+    events = events.concat(activePath.events);
   }
   // Deduplicate
   const uniqueEventsMap = new Map();
   events.forEach(e => {
     uniqueEventsMap.set(e.event_id, e);
   });
+  
+  // Add custom logs
+  customLogs.forEach(e => {
+    uniqueEventsMap.set(e.event_id, e);
+  });
+  
   events = Array.from(uniqueEventsMap.values());
   // Sort
   events.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
@@ -63,7 +70,11 @@ export default function SystemTerminal({ attackPaths, searchQuery = "" }: { atta
             return (
               <div key={i} className={`mb-2 flex gap-4 ${getEventStyle(ev.event_type)}`}>
                 <span className="shrink-0 w-20">{formatTime(ev.timestamp)}</span>
-                <span>[{isCritical ? 'CRIT' : 'INFO'}] {formatEventName(ev.event_type)} on {ev.device_id}</span>
+                {ev.event_type === 'system_log' ? (
+                  <span>{ev.message}</span>
+                ) : (
+                  <span>[{isCritical ? 'CRIT' : 'INFO'}] {formatEventName(ev.event_type)} on {ev.device_id}</span>
+                )}
               </div>
             );
           })

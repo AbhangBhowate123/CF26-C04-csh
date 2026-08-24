@@ -421,14 +421,17 @@ def trigger_attack():
     POST /api/trigger-attack
     Runs generate_telemetry.py and reloads data.
     """
+    import sys
     script_path = r"generate_telemetry.py"
     try:
-        subprocess.run(["python", script_path], check=True, capture_output=True, text=True)
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True, text=True)
         load_telemetry_data()
         return jsonify({"status": "success", "message": "Telemetry regenerated and reloaded."})
     except subprocess.CalledProcessError as e:
         return jsonify({"error": "Failed to generate telemetry", "details": e.stderr}), 500
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
 

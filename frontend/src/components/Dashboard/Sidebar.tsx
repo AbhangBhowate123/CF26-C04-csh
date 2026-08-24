@@ -10,10 +10,14 @@ const MENU_ITEMS = [
 
 export default function Sidebar({ 
   activeView, 
-  setActiveView 
+  setActiveView,
+  isLockdownActive = false,
+  onToggleLockdown
 }: { 
   activeView: string; 
   setActiveView: (view: string) => void;
+  isLockdownActive?: boolean;
+  onToggleLockdown?: () => void;
 }) {
   return (
     <nav className="fixed left-0 top-16 h-[calc(100vh-64px)] z-40 flex flex-col py-4 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant bg-opacity-80 backdrop-blur-xl docked w-20 hover:w-64 transition-all duration-300 group overflow-hidden">
@@ -21,7 +25,9 @@ export default function Sidebar({
         <img alt="System Status" className="w-10 h-10 rounded-full border border-outline-variant object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNS3vV7MUie3GAAethS9z8pkAf4YC_oagW6m_P-4CwjRhpzpPPATox6qT5vZ1-eK5pVlT2kP-ZIjgirsoQ9MrQwo25SYAtxIazNL667jZTOjwuLjh8BBqtvFW1ah9Wkb_t_JDCL6CPgvL4XR0yPnpXTSbP9XzjBUVi5RE4bxQxFo8Xt-P8JSYT7zuuK4ToBu6zso46Nsqjtw-LveNB1o4mJTcecWgyFswEyBGb4R8STdAFiqpG2SFh"/>
         <div>
           <h2 className="font-data-code text-data-code text-on-surface font-bold">Sector-07</h2>
-          <p className="font-data-numeric text-data-numeric text-primary-fixed">Vigilance Active</p>
+          <p className={`font-data-numeric text-data-numeric ${isLockdownActive ? 'text-error pulsing-red font-bold' : 'text-primary-fixed'}`}>
+            {isLockdownActive ? 'LOCKDOWN ACTIVE' : 'Vigilance Active'}
+          </p>
         </div>
       </div>
       <ul className="flex flex-col gap-2 px-2 flex-1">
@@ -48,9 +54,16 @@ export default function Sidebar({
         })}
       </ul>
       <div className="px-4 mt-auto mb-4">
-        <button title="Coming soon" className="w-full flex items-center justify-center gap-2 py-2 border border-error text-error transition-colors rounded whitespace-nowrap overflow-hidden font-label-caps text-label-caps opacity-0 group-hover:opacity-100 opacity-40 cursor-not-allowed">
-          <span className="material-symbols-outlined text-sm">lock</span>
-          Emergency Lock
+        <button 
+          onClick={onToggleLockdown}
+          className={`w-full flex items-center justify-center gap-2 py-2 border transition-colors rounded whitespace-nowrap overflow-hidden font-label-caps text-label-caps opacity-0 group-hover:opacity-100 ${
+            isLockdownActive 
+              ? "border-error text-error bg-error-container pulsing-red font-bold" 
+              : "border-error text-error hover:bg-[rgba(147,0,10,0.1)]"
+          }`}
+        >
+          <span className="material-symbols-outlined text-sm">{isLockdownActive ? 'lock' : 'lock_open'}</span>
+          {isLockdownActive ? "LOCKDOWN ACTIVE" : "Emergency Lock"}
         </button>
       </div>
       <ul className="flex flex-col gap-2 px-2 mt-4 border-t border-outline-variant pt-4">

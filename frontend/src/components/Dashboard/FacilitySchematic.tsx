@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
 
-export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] }) {
+export default function FacilitySchematic({ activePath, isLockdownActive = false }: { activePath: any, isLockdownActive?: boolean }) {
   const [deviceFloors, setDeviceFloors] = useState<Record<string, number>>({});
   const [deviceTypes, setDeviceTypes] = useState<Record<string, string>>({});
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,31 +25,39 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
       .catch(console.error);
   }, []);
 
-  const activePath = useMemo(() => {
-    return attackPaths && attackPaths.length > 0 ? attackPaths[0].chain : [];
-  }, [attackPaths]);
+  const activePathChain = useMemo(() => {
+    return activePath ? activePath.chain : [];
+  }, [activePath]);
 
   const activeFloors = useMemo(() => {
     const floors = new Set<number>();
-    if (attackPaths && attackPaths.length > 0) {
-      attackPaths.forEach((path: any) => {
-        if (path.chain) {
-          path.chain.forEach((dev: string) => {
-            if (deviceFloors[dev] !== undefined) {
-              floors.add(deviceFloors[dev]);
-            }
-          });
+    if (activePath && activePath.chain) {
+      activePath.chain.forEach((dev: string) => {
+        if (deviceFloors[dev] !== undefined) {
+          floors.add(deviceFloors[dev]);
         }
       });
     }
     return floors;
-  }, [attackPaths, deviceFloors]);
+  }, [activePath, deviceFloors]);
 
   const getIconIdForDevice = (deviceId: string) => {
     const floor = deviceFloors[deviceId];
     const type = deviceTypes[deviceId];
     if (!floor || !type) return null;
 
+    if (floor === 5) {
+      if (type === 'camera') return 'icon-L5-camera';
+      if (type === 'badge_reader') return 'icon-L5-lock';
+      if (type === 'workstation' || type === 'iot_sensor') return 'icon-L5-sensor';
+      return 'icon-L5-sensor';
+    }
+    if (floor === 4) {
+      if (type === 'camera') return 'icon-L4-camera';
+      if (type === 'badge_reader') return 'icon-L4-lock';
+      if (type === 'workstation' || type === 'iot_sensor') return 'icon-L4-sensor';
+      return 'icon-L4-sensor';
+    }
     if (floor === 3) {
       if (type === 'camera') return 'icon-L3-camera';
       if (type === 'badge_reader') return 'icon-L3-lock';
@@ -71,7 +79,7 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
 
   useEffect(() => {
     const updateLines = () => {
-      if (!containerRef.current || activePath.length < 2) {
+      if (!containerRef.current || activePathChain.length < 2) {
         setPathLines(prev => prev.length === 0 ? prev : []);
         return;
       }
@@ -81,8 +89,8 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
       let previousValidId = null;
       let previousValidIndex = -1;
 
-      for (let i = 0; i < activePath.length; i++) {
-        const currentId = getIconIdForDevice(activePath[i]);
+      for (let i = 0; i < activePathChain.length; i++) {
+        const currentId = getIconIdForDevice(activePathChain[i]);
         if (currentId) {
           if (previousValidId && previousValidId !== currentId) {
             const el1 = document.getElementById(currentId);
@@ -124,8 +132,10 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
       window.removeEventListener('resize', updateLines);
       clearTimeout(timeout);
     };
-  }, [activePath, deviceFloors, deviceTypes]);
+  }, [activePathChain, deviceFloors, deviceTypes]);
 
+  const isL5Active = activeFloors.has(5);
+  const isL4Active = activeFloors.has(4);
   const isL3Active = activeFloors.has(3);
   const isL2Active = activeFloors.has(2);
   const isL1Active = activeFloors.has(1);
@@ -184,6 +194,68 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
           })}
         </svg>
 
+        {/* Level 05 */}
+        <div className={`flex items-center gap-4 border p-3 rounded transition-colors duration-500 ${isL5Active ? 'border-[rgba(255,180,171,0.2)] bg-[rgba(147,0,10,0.1)] shadow-[0_0_15px_rgba(255,180,171,0.1)]' : 'border-[rgba(255,255,255,0.05)] bg-[rgba(10,12,16,0.5)]'}`}>
+          <div className="w-32">
+            <span className={`font-data-code text-data-code block ${isL5Active ? 'text-error' : 'text-on-surface-variant'}`}>LEVEL-05</span>
+            <span className={`font-label-caps text-label-caps opacity-70 ${isL5Active ? 'text-error' : 'text-primary-fixed'}`}>GUEST</span>
+          </div>
+          <div className={`flex-1 h-px relative ${isL5Active ? 'bg-[rgba(255,180,171,0.3)]' : 'bg-[rgba(255,255,255,0.1)]'}`}>
+            <div id="icon-L5-camera" className="absolute -top-3 left-[25%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL5Active ? 'text-error pulsing-red' : 'text-primary-fixed'}`}>videocam</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Camera - CCTV feed</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL5Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL5Active ? 'FEED DISRUPTED' : 'FEED ACTIVE')}</div>
+              </div>
+            </div>
+            <div id="icon-L5-lock" className="absolute -top-3 left-[75%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL5Active ? 'text-error' : 'text-primary-fixed'}`}>{isLockdownActive ? 'lock' : 'lock'}</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Lock - access control point</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL5Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL5Active ? 'OVERRIDDEN' : 'LOCKED')}</div>
+              </div>
+            </div>
+            <div id="icon-L5-sensor" className="absolute -top-3 left-[50%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL5Active ? 'text-error' : 'text-primary-fixed'}`}>sensors</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Sensor - Generic IoT</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL5Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL5Active ? 'COMPROMISED' : 'ONLINE')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Level 04 */}
+        <div className={`flex items-center gap-4 border p-3 rounded transition-colors duration-500 ${isL4Active ? 'border-[rgba(255,180,171,0.2)] bg-[rgba(147,0,10,0.1)] shadow-[0_0_15px_rgba(255,180,171,0.1)]' : 'border-[rgba(255,255,255,0.05)] bg-[rgba(10,12,16,0.5)]'}`}>
+          <div className="w-32">
+            <span className={`font-data-code text-data-code block ${isL4Active ? 'text-error' : 'text-on-surface-variant'}`}>LEVEL-04</span>
+            <span className={`font-label-caps text-label-caps opacity-70 ${isL4Active ? 'text-error' : 'text-primary-fixed'}`}>CORP</span>
+          </div>
+          <div className={`flex-1 h-px relative ${isL4Active ? 'bg-[rgba(255,180,171,0.3)]' : 'bg-[rgba(255,255,255,0.1)]'}`}>
+            <div id="icon-L4-camera" className="absolute -top-3 left-[15%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL4Active ? 'text-error pulsing-red' : 'text-primary-fixed'}`}>videocam</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Camera - CCTV feed</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL4Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL4Active ? 'FEED DISRUPTED' : 'FEED ACTIVE')}</div>
+              </div>
+            </div>
+            <div id="icon-L4-sensor" className="absolute -top-3 left-[40%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL4Active ? 'text-error' : 'text-primary-fixed'}`}>computer</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Workstation - Corp</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL4Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL4Active ? 'COMPROMISED' : 'ONLINE')}</div>
+              </div>
+            </div>
+            <div id="icon-L4-lock" className="absolute -top-3 left-[65%] flex flex-col items-center group cursor-help">
+              <span className={`material-symbols-outlined text-lg ${isL4Active ? 'text-error' : 'text-primary-fixed'}`}>{isLockdownActive ? 'lock' : 'lock'}</span>
+              <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
+                <div className="font-label-caps text-label-caps text-on-surface">Lock - access control point</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL4Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL4Active ? 'OVERRIDDEN' : 'LOCKED')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Level 03 */}
         <div className={`flex items-center gap-4 border p-3 rounded transition-colors duration-500 ${isL3Active ? 'border-[rgba(255,180,171,0.2)] bg-[rgba(147,0,10,0.1)] shadow-[0_0_15px_rgba(255,180,171,0.1)]' : 'border-[rgba(255,255,255,0.05)] bg-[rgba(10,12,16,0.5)]'}`}>
           <div className="w-32">
@@ -199,10 +271,10 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
               </div>
             </div>
             <div id="icon-L3-lock" className="absolute -top-3 left-[60%] flex flex-col items-center group cursor-help">
-              <span className={`material-symbols-outlined text-lg ${isL3Active ? 'text-error' : 'text-primary-fixed'}`}>lock</span>
+              <span className={`material-symbols-outlined text-lg ${isL3Active ? 'text-error' : 'text-primary-fixed'}`}>{isLockdownActive ? 'lock' : 'lock'}</span>
               <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
                 <div className="font-label-caps text-label-caps text-on-surface">Lock - access control point</div>
-                <div className={`font-data-numeric text-[10px] mt-0.5 ${isL3Active ? 'text-error' : 'text-primary-fixed'}`}>STATUS: {isL3Active ? 'OVERRIDDEN' : 'LOCKED'}</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL3Active ? 'text-error' : 'text-primary-fixed')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL3Active ? 'OVERRIDDEN' : 'LOCKED')}</div>
               </div>
             </div>
           </div>
@@ -229,10 +301,10 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
               </div>
             </div>
             <div id="icon-L2-lock" className="absolute -top-3 left-[80%] flex flex-col items-center group cursor-help">
-              <span className={`material-symbols-outlined text-lg ${isL2Active ? 'text-error' : 'text-[#ffb4a4]'}`}>lock_open</span>
+              <span className={`material-symbols-outlined text-lg ${isL2Active ? 'text-error' : 'text-[#ffb4a4]'}`}>{isLockdownActive ? 'lock' : 'lock_open'}</span>
               <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
                 <div className="font-label-caps text-label-caps text-on-surface">Lock - access control point</div>
-                <div className={`font-data-numeric text-[10px] mt-0.5 ${isL2Active ? 'text-error' : 'text-[#ffb4a4]'}`}>STATUS: {isL2Active ? 'BREACHED' : 'UNLOCKED'}</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL2Active ? 'text-error' : 'text-[#ffb4a4]')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL2Active ? 'BREACHED' : 'UNLOCKED')}</div>
               </div>
             </div>
           </div>
@@ -252,10 +324,10 @@ export default function FacilitySchematic({ attackPaths }: { attackPaths: any[] 
               </div>
             </div>
             <div id="icon-L1-lock" className="absolute -top-3 left-[45%] flex flex-col items-center group cursor-help">
-              <span className={`material-symbols-outlined text-lg ${isL1Active ? 'text-error' : 'text-on-surface-variant'}`}>lock_open</span>
+              <span className={`material-symbols-outlined text-lg ${isL1Active ? 'text-error' : 'text-on-surface-variant'}`}>{isLockdownActive ? 'lock' : 'lock_open'}</span>
               <div className="absolute bottom-full mb-1 hidden group-hover:block w-max bg-[#1d1f28] border border-outline-variant rounded px-2 py-1.5 z-20 shadow-lg pointer-events-none">
                 <div className="font-label-caps text-label-caps text-on-surface">Lock - access control point</div>
-                <div className={`font-data-numeric text-[10px] mt-0.5 ${isL1Active ? 'text-error' : 'text-on-surface-variant'}`}>STATUS: {isL1Active ? 'BREACHED' : 'UNLOCKED'}</div>
+                <div className={`font-data-numeric text-[10px] mt-0.5 ${isLockdownActive ? 'text-error' : (isL1Active ? 'text-error' : 'text-on-surface-variant')}`}>STATUS: {isLockdownActive ? 'EMERGENCY LOCKDOWN' : (isL1Active ? 'BREACHED' : 'UNLOCKED')}</div>
               </div>
             </div>
             <div id="icon-L1-camera" className="absolute -top-3 left-[75%] flex flex-col items-center group cursor-help">
