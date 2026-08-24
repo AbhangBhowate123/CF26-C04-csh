@@ -1,0 +1,2978 @@
+{
+  "devices": [
+    {
+      "id": "dev-001",
+      "type": "camera",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-002",
+      "type": "camera",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-003",
+      "type": "badge_reader",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-004",
+      "type": "badge_reader",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-005",
+      "type": "workstation",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-006",
+      "type": "workstation",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-007",
+      "type": "workstation",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-008",
+      "type": "workstation",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-009",
+      "type": "iot_sensor",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-010",
+      "type": "iot_sensor",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-011",
+      "type": "router",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-012",
+      "type": "server",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-013",
+      "type": "server",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-014",
+      "type": "server",
+      "floor": 1,
+      "network_segment": "vlan-servers",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-015",
+      "type": "camera",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-016",
+      "type": "camera",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-017",
+      "type": "badge_reader",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-018",
+      "type": "badge_reader",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-019",
+      "type": "workstation",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-020",
+      "type": "workstation",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-021",
+      "type": "workstation",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-022",
+      "type": "workstation",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-023",
+      "type": "iot_sensor",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-024",
+      "type": "iot_sensor",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-025"
+      ]
+    },
+    {
+      "id": "dev-025",
+      "type": "router",
+      "floor": 2,
+      "network_segment": "vlan-iot",
+      "connected_devices": [
+        "dev-011"
+      ]
+    },
+    {
+      "id": "dev-026",
+      "type": "camera",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-027",
+      "type": "camera",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-028",
+      "type": "badge_reader",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-029",
+      "type": "badge_reader",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-030",
+      "type": "workstation",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-031",
+      "type": "workstation",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-032",
+      "type": "workstation",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-033",
+      "type": "workstation",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-034",
+      "type": "iot_sensor",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-035",
+      "type": "iot_sensor",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-036"
+      ]
+    },
+    {
+      "id": "dev-036",
+      "type": "router",
+      "floor": 3,
+      "network_segment": "vlan-corp",
+      "connected_devices": []
+    },
+    {
+      "id": "dev-037",
+      "type": "camera",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-038",
+      "type": "camera",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-039",
+      "type": "badge_reader",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-040",
+      "type": "badge_reader",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-041",
+      "type": "workstation",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-042",
+      "type": "workstation",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-043",
+      "type": "workstation",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-044",
+      "type": "workstation",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-045",
+      "type": "iot_sensor",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-046",
+      "type": "iot_sensor",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": [
+        "dev-047"
+      ]
+    },
+    {
+      "id": "dev-047",
+      "type": "router",
+      "floor": 4,
+      "network_segment": "vlan-corp",
+      "connected_devices": []
+    },
+    {
+      "id": "dev-048",
+      "type": "camera",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-049",
+      "type": "camera",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-050",
+      "type": "badge_reader",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-051",
+      "type": "badge_reader",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-052",
+      "type": "workstation",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-053",
+      "type": "workstation",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-054",
+      "type": "workstation",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-055",
+      "type": "workstation",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-056",
+      "type": "iot_sensor",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-057",
+      "type": "iot_sensor",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": [
+        "dev-058"
+      ]
+    },
+    {
+      "id": "dev-058",
+      "type": "router",
+      "floor": 5,
+      "network_segment": "vlan-guest",
+      "connected_devices": []
+    }
+  ],
+  "events": [
+    {
+      "event_id": "384b576d",
+      "timestamp": "2026-08-23T20:00:21.992123",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d388bf3a",
+      "timestamp": "2026-08-23T20:00:32.658864",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "7e4f955b",
+      "timestamp": "2026-08-23T20:01:22.888570",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "99464c6e",
+      "timestamp": "2026-08-23T20:02:09.513224",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fd3ec5f7",
+      "timestamp": "2026-08-23T20:02:11.847064",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "27f39108",
+      "timestamp": "2026-08-23T20:02:40.590329",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "aaca6e29",
+      "timestamp": "2026-08-23T20:02:44.508063",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8425b739",
+      "timestamp": "2026-08-23T20:03:29.931673",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8659a1bf",
+      "timestamp": "2026-08-23T20:04:02.494451",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "e1cf8369",
+      "timestamp": "2026-08-23T20:04:08.332090",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "eb5e6d36",
+      "timestamp": "2026-08-23T20:04:16.963230",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5132a9e8",
+      "timestamp": "2026-08-23T20:04:42.326239",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1e5788eb",
+      "timestamp": "2026-08-23T20:04:48.213929",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3cdd2ab8",
+      "timestamp": "2026-08-23T20:05:46.572803",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bb77eafd",
+      "timestamp": "2026-08-23T20:05:49.409201",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bed2b83f",
+      "timestamp": "2026-08-23T20:06:16.074935",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b34c7c67",
+      "timestamp": "2026-08-23T20:06:24.114642",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "2e383df2",
+      "timestamp": "2026-08-23T20:07:05.813712",
+      "device_id": "dev-005",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d5ab9572",
+      "timestamp": "2026-08-23T20:07:20.457342",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fb456ba1",
+      "timestamp": "2026-08-23T20:07:33.440955",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "75944a7e",
+      "timestamp": "2026-08-23T20:09:04.511762",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "bdcf8725",
+      "timestamp": "2026-08-23T20:09:13.372011",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "fd20d11f",
+      "timestamp": "2026-08-23T20:09:32.803348",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1dfe396b",
+      "timestamp": "2026-08-23T20:09:57.887896",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "31b6a1e2",
+      "timestamp": "2026-08-23T20:10:22.650907",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d8a9dce0",
+      "timestamp": "2026-08-23T20:10:54.174069",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "0b66abf4",
+      "timestamp": "2026-08-23T20:11:05.357478",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "50ece7b9",
+      "timestamp": "2026-08-23T20:11:13.493590",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "daf1f800",
+      "timestamp": "2026-08-23T20:11:16.731541",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "131fb644",
+      "timestamp": "2026-08-23T20:11:38.451909",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6cd8f53a",
+      "timestamp": "2026-08-23T20:11:41.167115",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "072a745e",
+      "timestamp": "2026-08-23T20:12:23.267632",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4100c341",
+      "timestamp": "2026-08-23T20:12:39.602525",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d8e188e9",
+      "timestamp": "2026-08-23T20:12:51.717602",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "ba748c4a",
+      "timestamp": "2026-08-23T20:13:13.206276",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d18db9ff",
+      "timestamp": "2026-08-23T20:13:15.250775",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "930f3e63",
+      "timestamp": "2026-08-23T20:14:23.279649",
+      "device_id": "dev-007",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "5e1f4589",
+      "timestamp": "2026-08-23T20:14:43.623607",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "d70136ef",
+      "timestamp": "2026-08-23T20:14:59.311246",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5d9c22e2",
+      "timestamp": "2026-08-23T20:15:01.402968",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "a4507029",
+      "timestamp": "2026-08-23T20:15:05.832369",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "79964133",
+      "timestamp": "2026-08-23T20:15:15.190852",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7a099d6f",
+      "timestamp": "2026-08-23T20:16:37.924857",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "43b6ef01",
+      "timestamp": "2026-08-23T20:16:47.982988",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "8c7a5e41",
+      "timestamp": "2026-08-23T20:17:07.926429",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "498e534d",
+      "timestamp": "2026-08-23T20:17:48.390762",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "afeeba65",
+      "timestamp": "2026-08-23T20:17:53.606350",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "35b8ccb9",
+      "timestamp": "2026-08-23T20:18:17.792779",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ab0bc2f1",
+      "timestamp": "2026-08-23T20:18:49.247692",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "689e683f",
+      "timestamp": "2026-08-23T20:18:52.295562",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e52771fd",
+      "timestamp": "2026-08-23T20:19:09.651525",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "64d3bcf7",
+      "timestamp": "2026-08-23T20:19:11.052802",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "b02941de",
+      "timestamp": "2026-08-23T20:19:20.988122",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e68efaef",
+      "timestamp": "2026-08-23T20:19:23.469496",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "24f44b8c",
+      "timestamp": "2026-08-23T20:19:54.746037",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b19b14d5",
+      "timestamp": "2026-08-23T20:19:55.458501",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "38f11408",
+      "timestamp": "2026-08-23T20:21:20.438182",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "dbb415ce",
+      "timestamp": "2026-08-23T20:22:02.631728",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "f61e63bc",
+      "timestamp": "2026-08-23T20:22:21.987547",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "b05770ef",
+      "timestamp": "2026-08-23T20:22:51.957540",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "657d84b5",
+      "timestamp": "2026-08-23T20:23:04.051469",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "121e3cce",
+      "timestamp": "2026-08-23T20:23:12.796233",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "febcccc9",
+      "timestamp": "2026-08-23T20:23:14.121711",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "63db82aa",
+      "timestamp": "2026-08-23T20:23:24.746986",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c17fdaaf",
+      "timestamp": "2026-08-23T20:23:25.169978",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6ef019a5",
+      "timestamp": "2026-08-23T20:23:30.240937",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0af69201",
+      "timestamp": "2026-08-23T20:23:35.589175",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "480934f4",
+      "timestamp": "2026-08-23T20:23:44.904560",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "e4c35c34",
+      "timestamp": "2026-08-23T20:23:53.251594",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "c7811d01",
+      "timestamp": "2026-08-23T20:24:21.588845",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "dabd4432",
+      "timestamp": "2026-08-23T20:24:31.078465",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5f075721",
+      "timestamp": "2026-08-23T20:24:33.374450",
+      "device_id": "dev-046",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "dec49660",
+      "timestamp": "2026-08-23T20:24:48.859702",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "713868a5",
+      "timestamp": "2026-08-23T20:25:22.722168",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5cba34bf",
+      "timestamp": "2026-08-23T20:25:24.669710",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "13e3e719",
+      "timestamp": "2026-08-23T20:25:32.787418",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "6b51cbf1",
+      "timestamp": "2026-08-23T20:25:41.358371",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a15f83a7",
+      "timestamp": "2026-08-23T20:25:57.391016",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "c5aecbda",
+      "timestamp": "2026-08-23T20:26:00.353116",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c3a7ec39",
+      "timestamp": "2026-08-23T20:26:09.550129",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "571c49dc",
+      "timestamp": "2026-08-23T20:26:18.193704",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b17c2d3a",
+      "timestamp": "2026-08-23T20:26:32.161254",
+      "device_id": "dev-047",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9c6073f9",
+      "timestamp": "2026-08-23T20:26:32.903858",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "dc3d7431",
+      "timestamp": "2026-08-23T20:26:59.933169",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "5fbecf55",
+      "timestamp": "2026-08-23T20:27:22.635399",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "f532b9ef",
+      "timestamp": "2026-08-23T20:27:27.088070",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c10d8e14",
+      "timestamp": "2026-08-23T20:28:19.171701",
+      "device_id": "dev-047",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "21231bfa",
+      "timestamp": "2026-08-23T20:28:19.902188",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bdb3e5a5",
+      "timestamp": "2026-08-23T20:28:39.301889",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "69189103",
+      "timestamp": "2026-08-23T20:28:41.277687",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "05c01e9b",
+      "timestamp": "2026-08-23T20:29:24.387954",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5366554d",
+      "timestamp": "2026-08-23T20:30:16.197841",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "7f7f52c7",
+      "timestamp": "2026-08-23T20:30:47.688907",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "66a965c1",
+      "timestamp": "2026-08-23T20:30:57.466431",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e9cb7f9b",
+      "timestamp": "2026-08-23T20:31:01.888710",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1c60f344",
+      "timestamp": "2026-08-23T20:31:43.327080",
+      "device_id": "dev-007",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ce41f88c",
+      "timestamp": "2026-08-23T20:33:32.733255",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "674996ac",
+      "timestamp": "2026-08-23T20:34:13.637464",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "8860a5ee",
+      "timestamp": "2026-08-23T20:34:24.933518",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8d0f071e",
+      "timestamp": "2026-08-23T20:34:33.551082",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "367cedaa",
+      "timestamp": "2026-08-23T20:35:05.793649",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "97987531",
+      "timestamp": "2026-08-23T20:35:32.702485",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9d409c18",
+      "timestamp": "2026-08-23T20:35:35.145519",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "d2aaeb23",
+      "timestamp": "2026-08-23T20:36:28.450143",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fd6f2649",
+      "timestamp": "2026-08-23T20:36:29.100690",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "ba1aee69",
+      "timestamp": "2026-08-23T20:36:36.759897",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "7ea7e56f",
+      "timestamp": "2026-08-23T20:36:39.302693",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b4cbc89f",
+      "timestamp": "2026-08-23T20:36:44.461753",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "92e5df69",
+      "timestamp": "2026-08-23T20:36:55.436526",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "cf336676",
+      "timestamp": "2026-08-23T20:37:12.169059",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8b7de021",
+      "timestamp": "2026-08-23T20:37:40.183028",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0445efd8",
+      "timestamp": "2026-08-23T20:38:01.570639",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "3b2b8794",
+      "timestamp": "2026-08-23T20:38:06.966231",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8216eb44",
+      "timestamp": "2026-08-23T20:38:11.859941",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "ce604c48",
+      "timestamp": "2026-08-23T20:39:15.245188",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1db6365d",
+      "timestamp": "2026-08-23T20:40:01.832778",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "4a7b0b78",
+      "timestamp": "2026-08-23T20:40:06.737742",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "01ba10df",
+      "timestamp": "2026-08-23T20:40:14.121097",
+      "device_id": "dev-007",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "35ae9c2a",
+      "timestamp": "2026-08-23T20:40:30.571049",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a63ec7ff",
+      "timestamp": "2026-08-23T20:40:42.183989",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d1d44443",
+      "timestamp": "2026-08-23T20:41:58.926587",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "62fe45e4",
+      "timestamp": "2026-08-23T20:42:01.308972",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d4e309bc",
+      "timestamp": "2026-08-23T20:42:55.603127",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9416c616",
+      "timestamp": "2026-08-23T20:44:10.566824",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "b326b840",
+      "timestamp": "2026-08-23T20:44:23.374341",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c172f56e",
+      "timestamp": "2026-08-23T20:44:28.738073",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "abe9f618",
+      "timestamp": "2026-08-23T20:44:38.466800",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fd09e963",
+      "timestamp": "2026-08-23T20:45:10.684356",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ce491cb8",
+      "timestamp": "2026-08-23T20:45:51.773299",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "c6d86157",
+      "timestamp": "2026-08-23T20:46:26.120634",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5c318fdf",
+      "timestamp": "2026-08-23T20:47:00.519202",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "f0bf469a",
+      "timestamp": "2026-08-23T20:47:31.431526",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bee5affa",
+      "timestamp": "2026-08-23T20:48:46.094311",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "ae9077bf",
+      "timestamp": "2026-08-23T20:49:15.080162",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "c656613d",
+      "timestamp": "2026-08-23T20:49:24.196649",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a231eafa",
+      "timestamp": "2026-08-23T20:49:26.043378",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8754188a",
+      "timestamp": "2026-08-23T20:49:28.208951",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "75042795",
+      "timestamp": "2026-08-23T20:50:04.897094",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d55da709",
+      "timestamp": "2026-08-23T20:50:25.054851",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "48baa680",
+      "timestamp": "2026-08-23T20:50:58.400375",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1e9ef0f0",
+      "timestamp": "2026-08-23T20:51:02.028227",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7b7a189c",
+      "timestamp": "2026-08-23T20:51:40.631674",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "de546fc7",
+      "timestamp": "2026-08-23T20:52:02.577494",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "35c87534",
+      "timestamp": "2026-08-23T20:52:31.595357",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "eaa251bd",
+      "timestamp": "2026-08-23T20:52:48.145582",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2bb3dddb",
+      "timestamp": "2026-08-23T20:53:18.576295",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b20b016e",
+      "timestamp": "2026-08-23T20:53:58.201803",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c2d12f38",
+      "timestamp": "2026-08-23T20:54:25.801722",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "31d46192",
+      "timestamp": "2026-08-23T20:55:05.652054",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "90a96596",
+      "timestamp": "2026-08-23T20:55:16.947752",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "540882c1",
+      "timestamp": "2026-08-23T20:55:23.910662",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6b4e394a",
+      "timestamp": "2026-08-23T20:55:41.264556",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2f431e16",
+      "timestamp": "2026-08-23T20:55:55.546043",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "d76c27be",
+      "timestamp": "2026-08-23T20:56:54.460233",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "791184b5",
+      "timestamp": "2026-08-23T20:57:24.008102",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "0ec3ec9b",
+      "timestamp": "2026-08-23T20:57:26.795725",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "977a7380",
+      "timestamp": "2026-08-23T20:58:09.665663",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "30eb8073",
+      "timestamp": "2026-08-23T20:58:18.398700",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a8275448",
+      "timestamp": "2026-08-23T20:58:34.981908",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6b103176",
+      "timestamp": "2026-08-23T20:58:39.195118",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "08a1fa7d",
+      "timestamp": "2026-08-23T20:58:44.692769",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "8abc9ded",
+      "timestamp": "2026-08-23T20:58:49.248686",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "74bb17d0",
+      "timestamp": "2026-08-23T20:59:00.480407",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6eaac81b",
+      "timestamp": "2026-08-23T20:59:16.200131",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "41054d30",
+      "timestamp": "2026-08-23T20:59:35.313242",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "f39daf5e",
+      "timestamp": "2026-08-23T20:59:44.298569",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "38fd143b",
+      "timestamp": "2026-08-23T20:59:51.877800",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a12e31ce",
+      "timestamp": "2026-08-23T21:00:31.035349",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "79d99a51",
+      "timestamp": "2026-08-23T21:00:55.067716",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "28a7e900",
+      "timestamp": "2026-08-23T21:01:53.549908",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "315c23f0",
+      "timestamp": "2026-08-23T21:01:58.995021",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c54aeeea",
+      "timestamp": "2026-08-23T21:02:09.129471",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e05e8bc2",
+      "timestamp": "2026-08-23T21:02:09.859204",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f374d0a0",
+      "timestamp": "2026-08-23T21:02:50.961649",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "d4479e25",
+      "timestamp": "2026-08-23T21:02:51.975718",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c16f7bc1",
+      "timestamp": "2026-08-23T21:03:00.767502",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1a56c7e9",
+      "timestamp": "2026-08-23T21:04:12.237656",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3094eeca",
+      "timestamp": "2026-08-23T21:04:14.751956",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ae7e41d8",
+      "timestamp": "2026-08-23T21:04:19.926645",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "ffa4993d",
+      "timestamp": "2026-08-23T21:04:44.197487",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "50113f61",
+      "timestamp": "2026-08-23T21:05:31.128749",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c55f5d65",
+      "timestamp": "2026-08-23T21:05:32.516312",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9768e215",
+      "timestamp": "2026-08-23T21:05:39.956082",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d42e645e",
+      "timestamp": "2026-08-23T21:05:56.745862",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "34ce8d8e",
+      "timestamp": "2026-08-23T21:06:04.881116",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6fa333af",
+      "timestamp": "2026-08-23T21:06:30.215185",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6c7fea34",
+      "timestamp": "2026-08-23T21:07:35.148037",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3d496fa4",
+      "timestamp": "2026-08-23T21:07:59.438869",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0047e88c",
+      "timestamp": "2026-08-23T21:08:12.020478",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "ed750eaf",
+      "timestamp": "2026-08-23T21:08:13.338242",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a111a49c",
+      "timestamp": "2026-08-23T21:08:18.644848",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f3cb2b61",
+      "timestamp": "2026-08-23T21:08:48.713712",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "257a87b4",
+      "timestamp": "2026-08-23T21:09:02.410770",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "484ddfad",
+      "timestamp": "2026-08-23T21:09:23.032143",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "780cca7f",
+      "timestamp": "2026-08-23T21:10:07.518816",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f2a477eb",
+      "timestamp": "2026-08-23T21:10:19.565666",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7bb85da9",
+      "timestamp": "2026-08-23T21:10:34.604280",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "af0cd61f",
+      "timestamp": "2026-08-23T21:11:04.711061",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f7e1c097",
+      "timestamp": "2026-08-23T21:11:05.838587",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9077f9a5",
+      "timestamp": "2026-08-23T21:12:23.359078",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bd687028",
+      "timestamp": "2026-08-23T21:12:24.807619",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f01b2125",
+      "timestamp": "2026-08-23T21:12:48.621865",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fa4cd942",
+      "timestamp": "2026-08-23T21:13:24.930373",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c1bb6243",
+      "timestamp": "2026-08-23T21:13:34.341187",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e9fc7752",
+      "timestamp": "2026-08-23T21:13:54.383881",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "76f43acf",
+      "timestamp": "2026-08-23T21:14:23.000542",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "68415320",
+      "timestamp": "2026-08-23T21:14:27.125797",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "ffa6d24e",
+      "timestamp": "2026-08-23T21:14:31.489410",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "db3aaa8d",
+      "timestamp": "2026-08-23T21:14:36.109515",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ecdeaa5f",
+      "timestamp": "2026-08-23T21:14:49.436700",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c64cc878",
+      "timestamp": "2026-08-23T21:16:08.562060",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a29fab6b",
+      "timestamp": "2026-08-23T21:16:18.725199",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "60a1f8ab",
+      "timestamp": "2026-08-23T21:16:28.093074",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8f44a03d",
+      "timestamp": "2026-08-23T21:16:56.456608",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "30c0f68b",
+      "timestamp": "2026-08-23T21:17:22.228221",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0e77386d",
+      "timestamp": "2026-08-23T21:19:47.843670",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c4980d4e",
+      "timestamp": "2026-08-23T21:20:16.959250",
+      "device_id": "dev-005",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "4b4c77dc",
+      "timestamp": "2026-08-23T21:20:29.127191",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b0cf4f68",
+      "timestamp": "2026-08-23T21:21:32.229986",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9fe4d4a1",
+      "timestamp": "2026-08-23T21:21:32.363312",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7d3af352",
+      "timestamp": "2026-08-23T21:21:39.648201",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "318c4b44",
+      "timestamp": "2026-08-23T21:21:46.304234",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e594589a",
+      "timestamp": "2026-08-23T21:21:48.245496",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "066e388c",
+      "timestamp": "2026-08-23T21:22:22.218344",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b453f48c",
+      "timestamp": "2026-08-23T21:22:38.268722",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c300fa42",
+      "timestamp": "2026-08-23T21:23:07.735861",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "c733c090",
+      "timestamp": "2026-08-23T21:24:12.796736",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b2df2d22",
+      "timestamp": "2026-08-23T21:24:18.649684",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "30c281e6",
+      "timestamp": "2026-08-23T21:24:45.750637",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "48afdab2",
+      "timestamp": "2026-08-23T21:24:51.748563",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fe2053cc",
+      "timestamp": "2026-08-23T21:25:51.518575",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c07905ba",
+      "timestamp": "2026-08-23T21:26:24",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "anomalous_outbound_connection",
+      "target_device_id": null,
+      "note": "unexpected outbound connection volume"
+    },
+    {
+      "event_id": "42b7f88f",
+      "timestamp": "2026-08-23T21:26:55.236676",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "0b8802f1",
+      "timestamp": "2026-08-23T21:27:07.884411",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "a917e32a",
+      "timestamp": "2026-08-23T21:27:12.429364",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "lateral_movement",
+      "target_device_id": "dev-013",
+      "network_segment_crossed": true
+    },
+    {
+      "event_id": "a917e32a",
+      "timestamp": "2026-08-23T21:27:12.429364",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "lateral_movement",
+      "target_device_id": "dev-013",
+      "network_segment_crossed": true
+    },
+    {
+      "event_id": "79b050ef",
+      "timestamp": "2026-08-23T21:27:26.696269",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7cd05190",
+      "timestamp": "2026-08-23T21:27:30.253583",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "158fa6aa",
+      "timestamp": "2026-08-23T21:27:38.709702",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "suspicious_auth_attempt",
+      "target_device_id": null,
+      "auth_result": "failed_then_succeeded",
+      "attempts": 4
+    },
+    {
+      "event_id": "a7d07bc7",
+      "timestamp": "2026-08-23T21:27:38.821340",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "99e85897",
+      "timestamp": "2026-08-23T21:27:41.902142",
+      "device_id": "dev-046",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a6c74468",
+      "timestamp": "2026-08-23T21:28:07.339474",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "privilege_escalation",
+      "target_device_id": null,
+      "escalated_to": "admin"
+    },
+    {
+      "event_id": "ddcb9b76",
+      "timestamp": "2026-08-23T21:28:20.072926",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "7ce8400d",
+      "timestamp": "2026-08-23T21:28:29.002088",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "68dd831c",
+      "timestamp": "2026-08-23T21:29:32.088013",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8545f1fc",
+      "timestamp": "2026-08-23T21:29:35.135022",
+      "device_id": "dev-046",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "781fdc58",
+      "timestamp": "2026-08-23T21:29:35.389581",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b9e39572",
+      "timestamp": "2026-08-23T21:30:36.086988",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f6ebb5fc",
+      "timestamp": "2026-08-23T21:30:43.286216",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "df90b7a2",
+      "timestamp": "2026-08-23T21:32:17.557520",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fae62483",
+      "timestamp": "2026-08-23T21:32:23.601067",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f1c895d9",
+      "timestamp": "2026-08-23T21:32:45.736646",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "93659104",
+      "timestamp": "2026-08-23T21:32:55.198635",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "a0137157",
+      "timestamp": "2026-08-23T21:34:13.142682",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9fa29e93",
+      "timestamp": "2026-08-23T21:34:15.501522",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ef9e6751",
+      "timestamp": "2026-08-23T21:34:26.310764",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fcc28284",
+      "timestamp": "2026-08-23T21:35:21.859552",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "6bad93d2",
+      "timestamp": "2026-08-23T21:35:38.563863",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4d379c54",
+      "timestamp": "2026-08-23T21:38:03.010341",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "697a2bd0",
+      "timestamp": "2026-08-23T21:38:09.547279",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d1faa06b",
+      "timestamp": "2026-08-23T21:38:43.403865",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5ca189bb",
+      "timestamp": "2026-08-23T21:39:39.095504",
+      "device_id": "dev-005",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "35cca9e2",
+      "timestamp": "2026-08-23T21:40:32.968914",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c3c591b6",
+      "timestamp": "2026-08-23T21:41:02.704957",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "cf32aa95",
+      "timestamp": "2026-08-23T21:41:46.543873",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5d9aae1e",
+      "timestamp": "2026-08-23T21:42:19.881003",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3c4a4a38",
+      "timestamp": "2026-08-23T21:42:45.731555",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "04dd9181",
+      "timestamp": "2026-08-23T21:43:11.104196",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4cac691e",
+      "timestamp": "2026-08-23T21:43:12.217313",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f1150ae0",
+      "timestamp": "2026-08-23T21:43:12.260569",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "2685864b",
+      "timestamp": "2026-08-23T21:44:33.335768",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3ae4202f",
+      "timestamp": "2026-08-23T21:45:01.320999",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1a3be9ca",
+      "timestamp": "2026-08-23T21:45:06.883296",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "17ed80f8",
+      "timestamp": "2026-08-23T21:45:11.072953",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3f1d7af8",
+      "timestamp": "2026-08-23T21:46:39.269443",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c78c63c7",
+      "timestamp": "2026-08-23T21:46:47.888344",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "23095c58",
+      "timestamp": "2026-08-23T21:47:07.390334",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "40d0632b",
+      "timestamp": "2026-08-23T21:47:29.672342",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "15707c3a",
+      "timestamp": "2026-08-23T21:49:10.011046",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "12d52e53",
+      "timestamp": "2026-08-23T21:49:29.530239",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6f7618dc",
+      "timestamp": "2026-08-23T21:49:51.463802",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "415537f0",
+      "timestamp": "2026-08-23T21:50:22.355615",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2cd15985",
+      "timestamp": "2026-08-23T21:51:16.923453",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0121ae93",
+      "timestamp": "2026-08-23T21:52:37.546672",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c21c492d",
+      "timestamp": "2026-08-23T21:53:03.511094",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fdf1446a",
+      "timestamp": "2026-08-23T21:53:32.753867",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "11e14815",
+      "timestamp": "2026-08-23T21:53:56.781404",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4fce4706",
+      "timestamp": "2026-08-23T21:54:12.632862",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d28af5fe",
+      "timestamp": "2026-08-23T21:54:58.739797",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b33b84ba",
+      "timestamp": "2026-08-23T21:55:19.936234",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "55295df7",
+      "timestamp": "2026-08-23T21:55:31.208679",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a739ab4b",
+      "timestamp": "2026-08-23T21:55:43.807277",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "0eaba3d5",
+      "timestamp": "2026-08-23T21:55:54.302726",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1092308c",
+      "timestamp": "2026-08-23T21:56:13.963521",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6f428c49",
+      "timestamp": "2026-08-23T21:56:33.811132",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7be48419",
+      "timestamp": "2026-08-23T21:56:42.440401",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "276ee386",
+      "timestamp": "2026-08-23T21:56:45.800224",
+      "device_id": "dev-005",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7553fb78",
+      "timestamp": "2026-08-23T21:57:50.089997",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "61f19166",
+      "timestamp": "2026-08-23T21:58:09.956299",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5bc56b51",
+      "timestamp": "2026-08-23T21:58:12.131249",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "54c351f3",
+      "timestamp": "2026-08-23T21:58:15.919259",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "84dfec01",
+      "timestamp": "2026-08-23T21:58:53.556756",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d9869eef",
+      "timestamp": "2026-08-23T21:59:05.915396",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f33bffcd",
+      "timestamp": "2026-08-23T21:59:42.644420",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d5ae9fc8",
+      "timestamp": "2026-08-23T21:59:43.968991",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null
+    }
+  ],
+  "ground_truth": {
+    "attack_present": true,
+    "description": "Compromised IoT device on floor dev-024 pivots across a shared VLAN to a floor-1 server, followed by a suspicious auth attempt and privilege escalation.",
+    "attacker_id": "dev-024",
+    "server_id": "dev-013",
+    "attack_window": [
+      "2026-08-23T21:26:24",
+      "2026-08-23T21:28:07.339474"
+    ]
+  }
+}
