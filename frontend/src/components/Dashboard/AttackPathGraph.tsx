@@ -93,7 +93,7 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
     1: 680,
   };
 
-  const nodeCoords = new Map<string, {x: number, y: number, floor: number, type: string}>();
+  const nodeCoords = new Map<string, {x: number, y: number, floor: number, type: string, state?: string}>();
 
   if (graphData && graphData.nodes) {
     // Group nodes by floor
