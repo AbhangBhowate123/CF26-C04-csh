@@ -65,13 +65,13 @@
   --spacing-stack-default: 12px;
 
   /* Fonts */
-  --font-data-numeric: var(--font-jetbrains-mono), monospace;
-  --font-data-code: var(--font-jetbrains-mono), monospace;
-  --font-headline-md: var(--font-inter), sans-serif;
-  --font-title-sm: var(--font-inter), sans-serif;
-  --font-body-default: var(--font-inter), sans-serif;
-  --font-label-caps: var(--font-jetbrains-mono), monospace;
-  --font-display-lg: var(--font-inter), sans-serif;
+  --font-data-numeric: 'JetBrains Mono', monospace;
+  --font-data-code: 'JetBrains Mono', monospace;
+  --font-headline-md: 'Inter', sans-serif;
+  --font-title-sm: 'Inter', sans-serif;
+  --font-body-default: 'Inter', sans-serif;
+  --font-label-caps: 'JetBrains Mono', monospace;
+  --font-display-lg: 'Inter', sans-serif;
 
   /* Font Sizes */
   --text-data-numeric: 11px;

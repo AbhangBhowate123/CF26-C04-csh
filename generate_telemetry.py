@@ -251,37 +251,50 @@ def generate_attack_scenario(devices, base_time, window_minutes):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--attack", action="store_true", help="Inject attack scenario")
+    args = parser.parse_args()
+
     base_time = datetime(2026, 8, 23, 20, 0, 0)
     window_minutes = 120
 
     devices = build_devices()
     devices = wire_topology(devices)
 
-    noise_events = generate_background_noise(devices, base_time, window_minutes, count=300)
-    attack_events, attack_meta = generate_attack_scenario(devices, base_time, window_minutes)
+    all_events = generate_background_noise(devices, base_time, window_minutes, count=300)
+    
+    attack_meta = None
+    if args.attack:
+        attack_events, attack_meta = generate_attack_scenario(devices, base_time, window_minutes)
+        all_events.extend(attack_events)
 
-    all_events = noise_events + attack_events
     all_events.sort(key=lambda e: e["timestamp"])  # mostly ordered, jitter still present
 
     output = {
         "devices": devices,
         "events": all_events,
         "ground_truth": {
-            "attack_present": True,
+            "attack_present": bool(args.attack),
+        },
+    }
+    
+    if args.attack:
+        output["ground_truth"].update({
             "description": (
                 f"Compromised IoT device on floor {attack_meta.get('attacker_id', 'unknown')} pivots across a shared VLAN "
                 "to a floor-1 server, followed by a suspicious auth attempt and "
                 "privilege escalation."
             ),
             **attack_meta,
-        },
-    }
+        })
 
     with open("telemetry.json", "w") as f:
         json.dump(output, f, indent=2)
 
     print(f"Generated {len(devices)} devices and {len(all_events)} events.")
-    print(f"Attack path: {attack_meta['attacker_id']} -> {attack_meta['server_id']}")
+    if args.attack:
+        print(f"Attack path: {attack_meta['attacker_id']} -> {attack_meta['server_id']}")
     print("Saved to telemetry.json")
 
 

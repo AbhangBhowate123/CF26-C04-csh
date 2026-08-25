@@ -5,6 +5,7 @@ export default function Header({
   searchQuery, 
   setSearchQuery,
   onSimulateClick,
+  onResetClick,
   isSimulating,
   isLockdownActive,
   notifications = [],
@@ -14,6 +15,7 @@ export default function Header({
   searchQuery?: string, 
   setSearchQuery?: (val: string) => void,
   onSimulateClick?: () => void,
+  onResetClick?: () => void,
   isSimulating?: boolean,
   isLockdownActive?: boolean,
   notifications?: any[],
@@ -47,6 +49,19 @@ export default function Header({
         </div>
         
         <div className="flex gap-4 relative items-center">
+          <button 
+            onClick={onResetClick} 
+            disabled={isSimulating}
+            className={`flex items-center gap-2 px-4 py-1.5 rounded font-label-caps text-label-caps tracking-widest transition-all ${
+              isSimulating 
+                ? 'bg-surface-variant text-on-surface-variant cursor-not-allowed opacity-50'
+                : 'bg-surface-variant text-on-surface hover:bg-surface hover:text-primary-fixed border border-outline-variant hover:border-primary-fixed'
+            }`}
+          >
+            <span className="material-symbols-outlined text-sm">restart_alt</span>
+            RESTART
+          </button>
+          
           <button 
             onClick={onSimulateClick} 
             disabled={isSimulating || isLockdownActive}

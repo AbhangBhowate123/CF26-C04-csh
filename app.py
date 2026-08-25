@@ -47,6 +47,9 @@ EMERGENCY_LOCKDOWN = False          # Global lockdown flag
 LOCKDOWN_TOKENS = {}                # { token_str: { "created_at": datetime, "used": bool } }
 LOCKDOWN_TOKEN_TTL_MINUTES = 30     # Tokens expire after 30 minutes
 
+ISOLATED_DEVICES = set()
+DISABLED_DEVICES = set()
+
 def generate_lockdown_token():
     """Create a unique one-time token for emergency lockdown."""
     token = uuid.uuid4().hex
@@ -430,7 +433,9 @@ def find_lateral_movement_chains(window_minutes=DEFAULT_WINDOW_MINUTES,
 
         # ── Build causal graph for this window ──────────────────────────
         cg = nx.DiGraph()
-        cg.add_nodes_from(active_devices)
+        # Only add devices that are not isolated or disabled
+        valid_devices = [d for d in active_devices if d not in ISOLATED_DEVICES and d not in DISABLED_DEVICES]
+        cg.add_nodes_from(valid_devices)
 
         # (a) Explicit target edges from events (network/physical communication)
         for ev in window_events:
@@ -519,7 +524,7 @@ def trigger_attack():
     import sys
     script_path = r"generate_telemetry.py"
     try:
-        subprocess.run([sys.executable, script_path], check=True, capture_output=True, text=True)
+        subprocess.run([sys.executable, script_path, "--attack"], check=True, capture_output=True, text=True)
         load_telemetry_data()
         
         # Determine the top attack path and send notification
@@ -548,6 +553,32 @@ def trigger_attack():
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
+@app.route("/api/reset-telemetry", methods=["POST"])
+def reset_telemetry():
+    global LAST_NOTIFIED_ATTACK_PATH, EMERGENCY_LOCKDOWN, ISOLATED_DEVICES, DISABLED_DEVICES
+    """
+    POST /api/reset-telemetry
+    Runs generate_telemetry.py without attack and reloads data.
+    """
+    import sys
+    script_path = r"generate_telemetry.py"
+    try:
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True, text=True)
+        load_telemetry_data()
+        
+        LAST_NOTIFIED_ATTACK_PATH = None
+        EMERGENCY_LOCKDOWN = False
+        ISOLATED_DEVICES.clear()
+        DISABLED_DEVICES.clear()
+
+        return jsonify({"status": "success", "message": "Telemetry reset to normal."})
+    except subprocess.CalledProcessError as e:
+        return jsonify({"error": "Failed to reset telemetry", "details": e.stderr}), 500
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route("/api/graph", methods=["GET"])
 def graph_info():
@@ -555,7 +586,7 @@ def graph_info():
     GET /api/graph
     Returns the full device graph (nodes + edges) as JSON.
     """
-    nodes = [{"id": n, **GRAPH.nodes[n]} for n in GRAPH.nodes]
+    nodes = [{"id": n, **GRAPH.nodes[n], "state": "DISABLED" if n in DISABLED_DEVICES else "ISOLATED" if n in ISOLATED_DEVICES else "ONLINE"} for n in GRAPH.nodes]
     edges = [{"source": u, "target": v, **GRAPH.edges[u, v]} for u, v in GRAPH.edges]
     return jsonify({
         "node_count": len(nodes),
@@ -663,7 +694,7 @@ def device_detail(device_id):
             dev_events.append(row)
 
     return jsonify({
-        "device": dev,
+        "device": {**dev, "state": "DISABLED" if device_id in DISABLED_DEVICES else "ISOLATED" if device_id in ISOLATED_DEVICES else "ONLINE"},
         "graph": {
             "in_degree":    GRAPH.in_degree(device_id),
             "out_degree":   GRAPH.out_degree(device_id),
@@ -759,6 +790,30 @@ def lockdown_disengage():
         "lockdown_active": False
     })
 
+
+@app.route("/api/device/<device_id>/isolate", methods=["POST"])
+def isolate_device(device_id):
+    if device_id not in DEVICE_BY_ID:
+        return jsonify({"error": "Device not found"}), 404
+    ISOLATED_DEVICES.add(device_id)
+    return jsonify({"status": "success", "message": f"Device {device_id} isolated."})
+
+@app.route("/api/device/<device_id>/disable", methods=["POST"])
+def disable_device(device_id):
+    if device_id not in DEVICE_BY_ID:
+        return jsonify({"error": "Device not found"}), 404
+    DISABLED_DEVICES.add(device_id)
+    return jsonify({"status": "success", "message": f"Device {device_id} disabled."})
+
+@app.route("/api/device/<device_id>/enable", methods=["POST"])
+def enable_device(device_id):
+    if device_id not in DEVICE_BY_ID:
+        return jsonify({"error": "Device not found"}), 404
+    if device_id in ISOLATED_DEVICES:
+        ISOLATED_DEVICES.remove(device_id)
+    if device_id in DISABLED_DEVICES:
+        DISABLED_DEVICES.remove(device_id)
+    return jsonify({"status": "success", "message": f"Device {device_id} enabled (online)."})
 
 @app.route("/", methods=["GET"])
 def index():

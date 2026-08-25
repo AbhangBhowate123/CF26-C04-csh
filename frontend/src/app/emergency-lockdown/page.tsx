@@ -12,7 +12,7 @@ function EmergencyLockdownContent() {
   const [message, setMessage] = useState("");
   const [activatedAt, setActivatedAt] = useState("");
 
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
   useEffect(() => {
     if (!token) {

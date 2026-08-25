@@ -30,7 +30,7 @@ export default function DashboardLayout() {
   const originalTitle = useRef("Aegis Mission Control");
   const audioCtxRef = useRef<AudioContext | null>(null);
 
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
   const playAlertSound = (type: 'attack' | 'lockdown_on' | 'lockdown_off') => {
     if (isMuted) return;
@@ -198,7 +198,14 @@ export default function DashboardLayout() {
   useEffect(() => {
     fetchData();
     const interval = setInterval(fetchData, 120000); // Poll every 120s due to heavy backend compute
-    return () => clearInterval(interval);
+    
+    const handleRefreshEvent = () => fetchData();
+    window.addEventListener('refresh-attack-paths', handleRefreshEvent);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('refresh-attack-paths', handleRefreshEvent);
+    };
   }, []);
 
   const handleSimulateAttack = async () => {
@@ -222,12 +229,38 @@ export default function DashboardLayout() {
     }
   };
 
+  const handleReset = async () => {
+    setIsSimulating(true);
+    try {
+      const res = await fetch(`${API_BASE}/api/reset-telemetry`, { method: "POST" });
+      if (res.ok) {
+        setIsLockdownActive(false);
+        setAttackPaths([]);
+        setNotifications([]);
+        setActiveToasts([]);
+        // Optional: you can show a toast that the system was reset
+        addNotification('lockdown_off', 'SYSTEM RESET', 'Telemetry data has been cleared and reset.');
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      } else {
+        console.error("Reset failed with status", res.status);
+      }
+    } catch (error) {
+      console.error("Failed to reset telemetry", error);
+    } finally {
+      setIsSimulating(false);
+    }
+  };
+
   return (
     <>
       <Header 
         searchQuery={searchQuery} 
         setSearchQuery={setSearchQuery} 
         onSimulateClick={handleSimulateAttack} 
+        onResetClick={handleReset}
+
         isSimulating={isSimulating} 
         isLockdownActive={isLockdownActive} 
         notifications={notifications}

@@ -8,7 +8,7 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
   const [deviceDetails, setDeviceDetails] = useState<any>(null);
   const [graphData, setGraphData] = useState<{ nodes: any[], edges: any[] } | null>(null);
 
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
   // Re-fetch graph when attackPaths change (e.g., on simulation)
   useEffect(() => {
@@ -30,6 +30,29 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
       setDeviceDetails(null);
     }
   }, [activeDevice]);
+
+  const handleDeviceAction = async (action: 'isolate' | 'disable' | 'enable') => {
+    if (!activeDevice) return;
+    try {
+      const res = await fetch(`${API_BASE}/api/device/${activeDevice}/${action}`, { method: 'POST' });
+      if (res.ok) {
+        setDeviceDetails((prev: any) => ({
+          ...prev,
+          device: { ...prev.device, state: action === 'enable' ? 'ONLINE' : action === 'disable' ? 'DISABLED' : 'ISOLATED' }
+        }));
+        // Re-fetch graph to reflect state changes
+        fetch(`${API_BASE}/api/graph`)
+          .then(res => res.json())
+          .then(data => setGraphData(data))
+          .catch(console.error);
+        
+        // Trigger a refresh of attack paths in DashboardLayout
+        window.dispatchEvent(new Event('refresh-attack-paths'));
+      }
+    } catch(e) {
+      console.error(e);
+    }
+  };
 
   // The activePath is already passed as the single source of truth
   const bestPath = activePath;
@@ -95,7 +118,7 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
           const availableWidth = SVG_WIDTH - 2 * PADDING_X;
           x = PADDING_X + (i * (availableWidth / (count - 1)));
         }
-        nodeCoords.set(node.id, { x, y, floor, type: node.device_type });
+        nodeCoords.set(node.id, { x, y, floor, type: node.device_type, state: node.state });
       });
     });
   }
@@ -187,7 +210,7 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
                 
                 {/* Draw All Nodes */}
                 {Array.from(nodeCoords.entries()).map(([deviceId, coords], i) => {
-                  const { x, y, type } = coords;
+                  const { x, y, type, state } = coords as any;
                   const isCompromised = compromisedNodes.has(deviceId);
                   const isTarget = targetNodes.has(deviceId);
                   const isEntry = entryNodes.has(deviceId);
@@ -200,7 +223,17 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
                   let textColor = "#e1e1ed";
                   let typeColor = "#8e9379";
                   
-                  if (isLockdownActive) {
+                  if (state === 'DISABLED') {
+                    strokeColor = "#444933";
+                    nodeClass = "opacity-50 transition-colors";
+                    textColor = "#444933";
+                    typeColor = "#444933";
+                  } else if (state === 'ISOLATED') {
+                    strokeColor = "#ffb400"; // Amber
+                    nodeClass = "group-hover:fill-[#ffb400] group-hover:fill-opacity-20 transition-colors";
+                    textColor = "#ffb400";
+                    typeColor = "#ffb400";
+                  } else if (isLockdownActive) {
                     strokeColor = "#ffb400"; // Amber for locked down
                     nodeClass = "group-hover:fill-[#ffb400] group-hover:fill-opacity-20 transition-colors";
                     if (isCompromised) {
@@ -320,22 +353,56 @@ export default function AttackPathGraph({ activePath, isLockdownActive = false }
                           const isInActivePath = compromisedNodes.has(activeDevice);
                           return (
                             <div className={`px-2 py-1 rounded flex items-center gap-2 ${
-                              isLockdownActive 
-                                ? 'bg-[rgba(255,180,0,0.15)] text-[#ffb400] border border-[#ffb400]' 
-                                : (isInActivePath ? 'bg-error-container text-on-error-container' : 'bg-primary-container text-on-primary-container')
+                              deviceDetails.device?.state === 'DISABLED'
+                                ? 'bg-surface-variant text-on-surface-variant border border-outline'
+                                : deviceDetails.device?.state === 'ISOLATED'
+                                  ? 'bg-[rgba(255,180,0,0.15)] text-[#ffb400] border border-[#ffb400]'
+                                  : isLockdownActive 
+                                    ? 'bg-[rgba(255,180,0,0.15)] text-[#ffb400] border border-[#ffb400]' 
+                                    : (isInActivePath ? 'bg-error-container text-on-error-container' : 'bg-primary-container text-on-primary-container')
                             }`}>
                               <div className={`w-2 h-2 rounded-full ${
-                                isLockdownActive 
-                                  ? 'bg-[#ffb400]' 
-                                  : (isInActivePath ? 'bg-error pulsing-red' : 'bg-primary-fixed')
+                                deviceDetails.device?.state === 'DISABLED'
+                                  ? 'bg-on-surface-variant'
+                                  : deviceDetails.device?.state === 'ISOLATED'
+                                    ? 'bg-[#ffb400]'
+                                    : isLockdownActive 
+                                      ? 'bg-[#ffb400]' 
+                                      : (isInActivePath ? 'bg-error pulsing-red' : 'bg-primary-fixed')
                               }`}></div>
                               <span className="text-xs font-bold tracking-wider">
-                                {isLockdownActive ? 'LOCKED DOWN' : (isInActivePath ? 'COMPROMISED' : 'ONLINE')}
+                                {deviceDetails.device?.state === 'DISABLED' ? 'DISABLED' : deviceDetails.device?.state === 'ISOLATED' ? 'ISOLATED' : isLockdownActive ? 'LOCKED DOWN' : (isInActivePath ? 'COMPROMISED' : 'ONLINE')}
                               </span>
                             </div>
                           );
                         })()}
                       </div>
+                    </div>
+                    
+                    <div className="mt-8 flex flex-col gap-2">
+                      {deviceDetails.device?.state === 'ISOLATED' || deviceDetails.device?.state === 'DISABLED' ? (
+                        <button 
+                          onClick={() => handleDeviceAction('enable')}
+                          className="bg-surface-variant hover:bg-[rgba(195,244,0,0.15)] text-on-surface hover:text-[#c3f400] border border-outline-variant hover:border-[#c3f400] py-2 rounded font-label-caps tracking-widest transition-colors"
+                        >
+                          ENABLE DEVICE (RESTORE)
+                        </button>
+                      ) : (
+                        <>
+                          <button 
+                            onClick={() => handleDeviceAction('isolate')}
+                            className="bg-surface-variant hover:bg-[rgba(255,180,0,0.15)] text-on-surface hover:text-[#ffb400] border border-outline-variant hover:border-[#ffb400] py-2 rounded font-label-caps tracking-widest transition-colors"
+                          >
+                            ISOLATE DEVICE
+                          </button>
+                          <button 
+                            onClick={() => handleDeviceAction('disable')}
+                            className="bg-surface-variant hover:bg-[rgba(147,0,10,0.85)] text-on-surface hover:text-error border border-outline-variant hover:border-error py-2 rounded font-label-caps tracking-widest transition-colors"
+                          >
+                            DISABLE (TURN OFF)
+                          </button>
+                        </>
+                      )}
                     </div>
                   </>
                 ) : (

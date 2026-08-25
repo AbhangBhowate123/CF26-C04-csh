@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
 export default function FacilitySchematic({ activePath, isLockdownActive = false }: { activePath: any, isLockdownActive?: boolean }) {
   const [deviceFloors, setDeviceFloors] = useState<Record<string, number>>({});
