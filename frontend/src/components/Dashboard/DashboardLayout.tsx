@@ -105,11 +105,54 @@ export default function DashboardLayout() {
     }, 5000);
   };
 
-  const handleToggleLockdown = () => {
+  // Poll backend lockdown status every 5s so remote triggers (WhatsApp link) sync in real-time
+  const lockdownSyncedRef = useRef(false);
+  useEffect(() => {
+    const pollLockdownStatus = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/lockdown-status`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.lockdown_active && !isLockdownActive) {
+            // Remote lockdown was triggered (e.g. via WhatsApp link)
+            setIsLockdownActive(true);
+            if (!lockdownSyncedRef.current) {
+              lockdownSyncedRef.current = true;
+              setCustomLogs(prev => [...prev, {
+                event_id: `sys-remote-lock-${Date.now()}`,
+                event_type: 'system_log',
+                timestamp: new Date().toISOString(),
+                message: '[SYS] Emergency lockdown triggered REMOTELY via secure link'
+              }]);
+              addNotification('lockdown_on', 'REMOTE LOCKDOWN ACTIVATED', 'Emergency lockdown triggered via WhatsApp secure link.');
+            }
+          } else if (!data.lockdown_active && isLockdownActive) {
+            // Lockdown was disengaged remotely
+            setIsLockdownActive(false);
+            lockdownSyncedRef.current = false;
+          }
+        }
+      } catch (e) {
+        // Silently ignore — backend may be unreachable
+      }
+    };
+    const interval = setInterval(pollLockdownStatus, 5000);
+    return () => clearInterval(interval);
+  }, [isLockdownActive, API_BASE]);
+
+  const handleToggleLockdown = async () => {
     const willBeLocked = !isLockdownActive;
     setIsLockdownActive(willBeLocked);
     
     if (willBeLocked) {
+      // Notify backend
+      try {
+        await fetch(`${API_BASE}/api/emergency-lockdown`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: '__dashboard_manual__' })
+        });
+      } catch (e) { /* best effort */ }
       setCustomLogs(prev => [...prev, {
         event_id: `sys-lock-${Date.now()}`,
         event_type: 'system_log',
@@ -118,6 +161,11 @@ export default function DashboardLayout() {
       }]);
       addNotification('lockdown_on', 'EMERGENCY LOCKDOWN ACTIVE', 'Facility secured by Operator Alpha-1.');
     } else {
+      // Notify backend to disengage
+      try {
+        await fetch(`${API_BASE}/api/lockdown-disengage`, { method: 'POST' });
+      } catch (e) { /* best effort */ }
+      lockdownSyncedRef.current = false;
       setCustomLogs(prev => [...prev, {
         event_id: `sys-unlock-${Date.now()}`,
         event_type: 'system_log',

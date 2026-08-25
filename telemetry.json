@@ -96,7 +96,7 @@
       "floor": 1,
       "network_segment": "vlan-servers",
       "connected_devices": [
-        "dev-036"
+        "dev-025"
       ]
     },
     {
@@ -221,7 +221,9 @@
       "type": "router",
       "floor": 2,
       "network_segment": "vlan-iot",
-      "connected_devices": []
+      "connected_devices": [
+        "dev-011"
+      ]
     },
     {
       "id": "dev-026",
@@ -318,9 +320,7 @@
       "type": "router",
       "floor": 3,
       "network_segment": "vlan-corp",
-      "connected_devices": [
-        "dev-011"
-      ]
+      "connected_devices": []
     },
     {
       "id": "dev-037",
@@ -519,2539 +519,2543 @@
   ],
   "events": [
     {
-      "event_id": "4d49b38d",
-      "timestamp": "2026-08-23T20:00:04.438068",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "8124f40c",
-      "timestamp": "2026-08-23T20:00:06.134157",
-      "device_id": "dev-024",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "91078907",
-      "timestamp": "2026-08-23T20:00:06.518984",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "0f151b76",
-      "timestamp": "2026-08-23T20:00:43.252436",
+      "event_id": "2213915b",
+      "timestamp": "2026-08-23T20:00:43.450374",
       "device_id": "dev-019",
       "floor": 2,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "bf67e9a0",
-      "timestamp": "2026-08-23T20:01:23.083576",
-      "device_id": "dev-051",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "29e2a707",
-      "timestamp": "2026-08-23T20:01:40.568420",
-      "device_id": "dev-028",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ed52986a",
-      "timestamp": "2026-08-23T20:01:52.384446",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "61ddbbc9",
-      "timestamp": "2026-08-23T20:02:00.256808",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "4e37f94d",
-      "timestamp": "2026-08-23T20:02:31.861952",
-      "device_id": "dev-012",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "3e5d60f8",
-      "timestamp": "2026-08-23T20:03:26.175829",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "db931313",
-      "timestamp": "2026-08-23T20:03:45.649036",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "7396799f",
-      "timestamp": "2026-08-23T20:04:43.886222",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "65ce5da6",
-      "timestamp": "2026-08-23T20:04:56.214008",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "1890beb0",
-      "timestamp": "2026-08-23T20:05:20.304332",
-      "device_id": "dev-021",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "56774030",
-      "timestamp": "2026-08-23T20:05:32.083808",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "f5fff500",
-      "timestamp": "2026-08-23T20:06:22.472856",
-      "device_id": "dev-010",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "cacd3858",
-      "timestamp": "2026-08-23T20:06:27.047417",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ba6c9409",
-      "timestamp": "2026-08-23T20:06:39.540233",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a5b4ac70",
-      "timestamp": "2026-08-23T20:07:26.014275",
-      "device_id": "dev-035",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d845a94f",
-      "timestamp": "2026-08-23T20:07:30.545528",
-      "device_id": "dev-051",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "dfc73eb9",
-      "timestamp": "2026-08-23T20:08:09.526341",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "bc1d5e65",
-      "timestamp": "2026-08-23T20:08:10.340182",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "3edcdb1b",
-      "timestamp": "2026-08-23T20:08:11.694847",
-      "device_id": "dev-012",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "414d1b69",
-      "timestamp": "2026-08-23T20:08:50.140058",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "cb49f90b",
-      "timestamp": "2026-08-23T20:09:36.147344",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "13c08cda",
-      "timestamp": "2026-08-23T20:10:09.730984",
-      "device_id": "dev-037",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "6313c262",
-      "timestamp": "2026-08-23T20:10:18.092758",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "32465dd6",
-      "timestamp": "2026-08-23T20:11:00.469169",
-      "device_id": "dev-028",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "8ecde416",
-      "timestamp": "2026-08-23T20:11:03.454774",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "6cbf1dd4",
-      "timestamp": "2026-08-23T20:11:17.485629",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d796cb58",
-      "timestamp": "2026-08-23T20:11:22.378629",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "d7cb88d0",
-      "timestamp": "2026-08-23T20:11:28.688325",
-      "device_id": "dev-056",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "edfce266",
-      "timestamp": "2026-08-23T20:12:05.579487",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "27d85034",
-      "timestamp": "2026-08-23T20:12:13.152578",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "4fb7bc87",
-      "timestamp": "2026-08-23T20:12:21.195916",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ba51faa1",
-      "timestamp": "2026-08-23T20:12:36.818436",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "cd99cf49",
-      "timestamp": "2026-08-23T20:12:51.313511",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "4ee11e32",
-      "timestamp": "2026-08-23T20:13:43.215190",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "ebcf8da6",
-      "timestamp": "2026-08-23T20:13:49.241572",
-      "device_id": "dev-040",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "5c75cd6a",
-      "timestamp": "2026-08-23T20:13:51.389646",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "a639bd43",
-      "timestamp": "2026-08-23T20:13:56.242425",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1552305f",
-      "timestamp": "2026-08-23T20:13:58.987482",
-      "device_id": "dev-046",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "c4bb8bb1",
-      "timestamp": "2026-08-23T20:14:02.493993",
-      "device_id": "dev-041",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "ad30894f",
-      "timestamp": "2026-08-23T20:14:19.826579",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d649d526",
-      "timestamp": "2026-08-23T20:14:40.150716",
-      "device_id": "dev-045",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "cfae31cd",
-      "timestamp": "2026-08-23T20:15:12.103017",
-      "device_id": "dev-029",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "bc6996c7",
-      "timestamp": "2026-08-23T20:15:22.270289",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b8863a9a",
-      "timestamp": "2026-08-23T20:15:23.389209",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "38467dcf",
-      "timestamp": "2026-08-23T20:16:26.150722",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "b226b293",
-      "timestamp": "2026-08-23T20:17:05.338906",
-      "device_id": "dev-035",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1cbc1db6",
-      "timestamp": "2026-08-23T20:17:20.144324",
-      "device_id": "dev-017",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "5746e13d",
-      "timestamp": "2026-08-23T20:17:54.665758",
-      "device_id": "dev-033",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d8b78723",
-      "timestamp": "2026-08-23T20:17:58.208334",
-      "device_id": "dev-001",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "103ece5a",
-      "timestamp": "2026-08-23T20:18:24.473915",
-      "device_id": "dev-056",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "67bf98f7",
-      "timestamp": "2026-08-23T20:19:18.668678",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "571d0549",
-      "timestamp": "2026-08-23T20:19:23.140997",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "8435c652",
-      "timestamp": "2026-08-23T20:19:26.969113",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "8a7dafc6",
-      "timestamp": "2026-08-23T20:19:59.230627",
-      "device_id": "dev-004",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "b7edbae6",
-      "timestamp": "2026-08-23T20:20:08.332196",
-      "device_id": "dev-001",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "acc8cf03",
-      "timestamp": "2026-08-23T20:20:15.603993",
-      "device_id": "dev-033",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "5c96feff",
-      "timestamp": "2026-08-23T20:20:37.752209",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "2b448da8",
-      "timestamp": "2026-08-23T20:21:37.191450",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "2af983cc",
-      "timestamp": "2026-08-23T20:22:31.286049",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "a86feeb8",
-      "timestamp": "2026-08-23T20:22:40.567220",
-      "device_id": "dev-041",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "e23aeac8",
-      "timestamp": "2026-08-23T20:22:53.399456",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "97de5e82",
-      "timestamp": "2026-08-23T20:23:00.471008",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "329e256d",
-      "timestamp": "2026-08-23T20:23:29.589473",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "8db6d20e",
-      "timestamp": "2026-08-23T20:23:49.725176",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "254ac089",
-      "timestamp": "2026-08-23T20:26:14.606674",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b949325d",
-      "timestamp": "2026-08-23T20:26:36.167544",
-      "device_id": "dev-028",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "c7fbbae5",
-      "timestamp": "2026-08-23T20:27:01.584292",
-      "device_id": "dev-046",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "499bbc89",
-      "timestamp": "2026-08-23T20:27:58.144752",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "2fca9844",
-      "timestamp": "2026-08-23T20:28:01.154781",
-      "device_id": "dev-001",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e2dd5e08",
-      "timestamp": "2026-08-23T20:28:03.563853",
-      "device_id": "dev-048",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "262a68e3",
-      "timestamp": "2026-08-23T20:29:02.482120",
-      "device_id": "dev-022",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ff0703b9",
-      "timestamp": "2026-08-23T20:30:06.844644",
-      "device_id": "dev-017",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "a200b8d6",
-      "timestamp": "2026-08-23T20:30:21.663333",
-      "device_id": "dev-016",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "90f0d105",
-      "timestamp": "2026-08-23T20:30:38.905281",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "74b3c656",
-      "timestamp": "2026-08-23T20:31:00.290876",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "11d9301d",
-      "timestamp": "2026-08-23T20:31:48.411556",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "5ef78ddf",
-      "timestamp": "2026-08-23T20:32:07.691030",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ab49d976",
-      "timestamp": "2026-08-23T20:33:05.397358",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "40a2f5f4",
-      "timestamp": "2026-08-23T20:33:23.020891",
-      "device_id": "dev-019",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "3154e55f",
-      "timestamp": "2026-08-23T20:33:29.789161",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "661cc80e",
-      "timestamp": "2026-08-23T20:33:30.666872",
-      "device_id": "dev-035",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "9c2a3b82",
-      "timestamp": "2026-08-23T20:33:41.219442",
-      "device_id": "dev-007",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "1133c089",
-      "timestamp": "2026-08-23T20:33:57.790511",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "cfca5bd7",
-      "timestamp": "2026-08-23T20:34:29.012120",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "cbc7bf6a",
-      "timestamp": "2026-08-23T20:34:43.194885",
-      "device_id": "dev-016",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "dbca884f",
-      "timestamp": "2026-08-23T20:35:05.054146",
-      "device_id": "dev-012",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "949f5f8d",
-      "timestamp": "2026-08-23T20:35:24.153966",
-      "device_id": "dev-019",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "52b6419f",
-      "timestamp": "2026-08-23T20:35:56.110159",
-      "device_id": "dev-019",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "f55315bd",
-      "timestamp": "2026-08-23T20:37:01.531651",
-      "device_id": "dev-040",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "3bfd1160",
-      "timestamp": "2026-08-23T20:37:11.074600",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "a5465b88",
-      "timestamp": "2026-08-23T20:37:19.151280",
-      "device_id": "dev-043",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ef81c03b",
-      "timestamp": "2026-08-23T20:37:24.780432",
-      "device_id": "dev-048",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e520ad06",
-      "timestamp": "2026-08-23T20:37:53.687665",
-      "device_id": "dev-045",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "bf7dcbde",
-      "timestamp": "2026-08-23T20:38:14.699610",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "419e7359",
-      "timestamp": "2026-08-23T20:39:17.956095",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "1eac5d1e",
-      "timestamp": "2026-08-23T20:39:32.147361",
-      "device_id": "dev-030",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "c5776682",
-      "timestamp": "2026-08-23T20:39:57.735459",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "696312ec",
-      "timestamp": "2026-08-23T20:40:40.393427",
-      "device_id": "dev-036",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e811c90e",
-      "timestamp": "2026-08-23T20:41:10.961926",
-      "device_id": "dev-046",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b0fc9a5c",
-      "timestamp": "2026-08-23T20:41:13.447524",
-      "device_id": "dev-016",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "8f17b47a",
-      "timestamp": "2026-08-23T20:41:21.417478",
-      "device_id": "dev-014",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "fbd7926f",
-      "timestamp": "2026-08-23T20:41:46.962014",
-      "device_id": "dev-045",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e6311989",
-      "timestamp": "2026-08-23T20:42:06.029835",
-      "device_id": "dev-052",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "2e496e41",
-      "timestamp": "2026-08-23T20:42:14.520139",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "8dd4edea",
-      "timestamp": "2026-08-23T20:42:25.759957",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "132fb9b9",
-      "timestamp": "2026-08-23T20:42:54.915621",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "6dcfb5ae",
-      "timestamp": "2026-08-23T20:46:07.651417",
-      "device_id": "dev-025",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "c663d70c",
-      "timestamp": "2026-08-23T20:46:13.071539",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "2d41a8a5",
-      "timestamp": "2026-08-23T20:46:21.279973",
-      "device_id": "dev-024",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "b07940f2",
-      "timestamp": "2026-08-23T20:46:46.130136",
-      "device_id": "dev-019",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "1fdbe906",
-      "timestamp": "2026-08-23T20:46:48.557158",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "c51751fe",
-      "timestamp": "2026-08-23T20:46:54.570183",
-      "device_id": "dev-036",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "accdebd8",
-      "timestamp": "2026-08-23T20:46:57.549500",
-      "device_id": "dev-004",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "70c35ad6",
-      "timestamp": "2026-08-23T20:48:01.271998",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "bb080f9d",
-      "timestamp": "2026-08-23T20:48:13.253110",
-      "device_id": "dev-051",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "34f40ce8",
-      "timestamp": "2026-08-23T20:48:20.908301",
-      "device_id": "dev-012",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "68e6579d",
-      "timestamp": "2026-08-23T20:48:41.139493",
-      "device_id": "dev-030",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "a93f10b3",
-      "timestamp": "2026-08-23T20:49:53.438425",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "9ba2ba54",
-      "timestamp": "2026-08-23T20:50:17.447512",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "8d3d0d5d",
-      "timestamp": "2026-08-23T20:50:22.346889",
-      "device_id": "dev-036",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "1fb34496",
-      "timestamp": "2026-08-23T20:51:10.475017",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1b26d687",
-      "timestamp": "2026-08-23T20:51:12.565351",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "fb01873e",
-      "timestamp": "2026-08-23T20:52:06.284941",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1526e756",
-      "timestamp": "2026-08-23T20:53:47.290239",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "80dd647b",
-      "timestamp": "2026-08-23T20:54:02.706046",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "5eafc69e",
-      "timestamp": "2026-08-23T20:54:21.708734",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "d3687b45",
-      "timestamp": "2026-08-23T20:54:22.235607",
-      "device_id": "dev-026",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a5df35d1",
-      "timestamp": "2026-08-23T20:54:25.241792",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "78e06b68",
-      "timestamp": "2026-08-23T20:55:20.561500",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "6efb2671",
-      "timestamp": "2026-08-23T20:55:31.315843",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "3181486d",
-      "timestamp": "2026-08-23T20:55:38.731313",
-      "device_id": "dev-026",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "e5c3c536",
-      "timestamp": "2026-08-23T20:55:51.317560",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "02f61440",
-      "timestamp": "2026-08-23T20:55:56.502833",
-      "device_id": "dev-026",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "bd6acde7",
-      "timestamp": "2026-08-23T20:56:32.079352",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "da8b1ef2",
-      "timestamp": "2026-08-23T20:56:41.321561",
-      "device_id": "dev-017",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "653bbb2e",
-      "timestamp": "2026-08-23T20:57:05.346579",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "7e3416a8",
-      "timestamp": "2026-08-23T20:57:17.309247",
-      "device_id": "dev-048",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "3f83f0e8",
-      "timestamp": "2026-08-23T20:57:24.396065",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "8e871587",
-      "timestamp": "2026-08-23T20:57:42.469740",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d087a20a",
-      "timestamp": "2026-08-23T20:58:48.886173",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "2c8450f0",
-      "timestamp": "2026-08-23T20:59:13.499851",
-      "device_id": "dev-015",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "5276f108",
-      "timestamp": "2026-08-23T20:59:38.502235",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "4c8b55d8",
-      "timestamp": "2026-08-23T20:59:41.939938",
-      "device_id": "dev-019",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "2d1bfe74",
-      "timestamp": "2026-08-23T21:00:05.540020",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b2aaefb5",
-      "timestamp": "2026-08-23T21:00:36.838247",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "0ee1e510",
-      "timestamp": "2026-08-23T21:00:56.926600",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e99c06e5",
-      "timestamp": "2026-08-23T21:01:03.263374",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "37c82975",
-      "timestamp": "2026-08-23T21:01:25.921428",
-      "device_id": "dev-047",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "6f4dc016",
-      "timestamp": "2026-08-23T21:02:16.851382",
-      "device_id": "dev-035",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "7b4eda68",
-      "timestamp": "2026-08-23T21:02:29.519280",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "62882bfd",
-      "timestamp": "2026-08-23T21:02:30.261903",
-      "device_id": "dev-022",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "2a9b6e55",
-      "timestamp": "2026-08-23T21:02:37.191328",
-      "device_id": "dev-030",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "adb57cd0",
-      "timestamp": "2026-08-23T21:02:45.832358",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "3925ea91",
-      "timestamp": "2026-08-23T21:02:54.515825",
-      "device_id": "dev-026",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "178b330f",
-      "timestamp": "2026-08-23T21:03:17.114398",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "0a0c95b5",
-      "timestamp": "2026-08-23T21:03:27.668308",
-      "device_id": "dev-030",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "0225e121",
-      "timestamp": "2026-08-23T21:03:32.056485",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "7c968f6d",
-      "timestamp": "2026-08-23T21:03:35.909951",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "6d7cebcd",
-      "timestamp": "2026-08-23T21:03:40.746742",
-      "device_id": "dev-052",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "23977807",
-      "timestamp": "2026-08-23T21:03:56.117992",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "81406204",
-      "timestamp": "2026-08-23T21:05:03.416437",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "15912411",
-      "timestamp": "2026-08-23T21:05:11.837033",
-      "device_id": "dev-041",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "52e43da3",
-      "timestamp": "2026-08-23T21:05:16.810554",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "dc9dc765",
-      "timestamp": "2026-08-23T21:05:41.693955",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "c364db45",
-      "timestamp": "2026-08-23T21:06:01.841210",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "bd1a8b82",
-      "timestamp": "2026-08-23T21:06:01.895369",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "4bae756a",
-      "timestamp": "2026-08-23T21:06:02.845382",
-      "device_id": "dev-047",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "5eb07baa",
-      "timestamp": "2026-08-23T21:06:03.251145",
+      "event_id": "e0bc8df7",
+      "timestamp": "2026-08-23T20:00:49.953091",
       "device_id": "dev-034",
       "floor": 3,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "78034fc5",
-      "timestamp": "2026-08-23T21:06:24.604527",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "367ba0c9",
-      "timestamp": "2026-08-23T21:06:43.437120",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "335ff253",
-      "timestamp": "2026-08-23T21:06:52.082772",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "f43e5e83",
-      "timestamp": "2026-08-23T21:08:15.269895",
-      "device_id": "dev-041",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "595226a6",
-      "timestamp": "2026-08-23T21:08:33.296814",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "38b75adc",
-      "timestamp": "2026-08-23T21:09:12.430125",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "0e853990",
-      "timestamp": "2026-08-23T21:10:28.722899",
-      "device_id": "dev-015",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "f28681b8",
-      "timestamp": "2026-08-23T21:10:52.026406",
-      "device_id": "dev-025",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": null
-    },
-    {
-      "event_id": "6105716d",
-      "timestamp": "2026-08-23T21:10:57.311200",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1290af02",
-      "timestamp": "2026-08-23T21:12:08.866290",
+      "event_id": "1ae81c08",
+      "timestamp": "2026-08-23T20:01:03.886126",
       "device_id": "dev-026",
       "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "83dd1810",
-      "timestamp": "2026-08-23T21:12:29.557229",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": null
-    },
-    {
-      "event_id": "86180a0c",
-      "timestamp": "2026-08-23T21:13:57.248393",
-      "device_id": "dev-058",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "60438744",
-      "timestamp": "2026-08-23T21:14:15.976295",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e9ac741f",
-      "timestamp": "2026-08-23T21:14:42.066377",
-      "device_id": "dev-010",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "9d236c5b",
-      "timestamp": "2026-08-23T21:14:54.961521",
-      "device_id": "dev-029",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "6080597b",
-      "timestamp": "2026-08-23T21:14:59.598152",
-      "device_id": "dev-024",
-      "floor": 2,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "34bf6ee2",
-      "timestamp": "2026-08-23T21:15:04.041559",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "bf879b9d",
-      "timestamp": "2026-08-23T21:15:17.127023",
-      "device_id": "dev-028",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "726981a2",
-      "timestamp": "2026-08-23T21:15:33.416000",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "9cc7e792",
-      "timestamp": "2026-08-23T21:16:02.357535",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ae8e0d4b",
-      "timestamp": "2026-08-23T21:16:07.316312",
-      "device_id": "dev-010",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "fb063707",
-      "timestamp": "2026-08-23T21:16:11.668659",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "410fc6c1",
-      "timestamp": "2026-08-23T21:16:17.461390",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "7b5f53b8",
-      "timestamp": "2026-08-23T21:16:34.559797",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "993d341c",
-      "timestamp": "2026-08-23T21:17:57.494778",
+      "event_id": "2190e894",
+      "timestamp": "2026-08-23T20:01:21.941787",
       "device_id": "dev-048",
       "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
     },
     {
-      "event_id": "48d3b40d",
-      "timestamp": "2026-08-23T21:18:48.335702",
-      "device_id": "dev-002",
+      "event_id": "1640cb1f",
+      "timestamp": "2026-08-23T20:01:52.074781",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4a29fb3b",
+      "timestamp": "2026-08-23T20:02:25.688835",
+      "device_id": "dev-012",
       "floor": 1,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "2657d34b",
-      "timestamp": "2026-08-23T21:18:56.817962",
+      "event_id": "33ded914",
+      "timestamp": "2026-08-23T20:02:41.494447",
+      "device_id": "dev-046",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "55d00af4",
+      "timestamp": "2026-08-23T20:03:05.200976",
       "device_id": "dev-026",
       "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "5a1d0ee3",
-      "timestamp": "2026-08-23T21:19:24.738715",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d524e553",
-      "timestamp": "2026-08-23T21:19:26.030377",
-      "device_id": "dev-007",
-      "floor": 1,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "435f158f",
-      "timestamp": "2026-08-23T21:19:50.354611",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "4acebf69",
-      "timestamp": "2026-08-23T21:20:19.164514",
-      "device_id": "dev-010",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "8ec9a378",
-      "timestamp": "2026-08-23T21:20:43.882509",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a64351e3",
-      "timestamp": "2026-08-23T21:21:06.482161",
+      "event_id": "10d1f929",
+      "timestamp": "2026-08-23T20:03:12.271365",
       "device_id": "dev-013",
       "floor": 1,
       "event_type": "network_heartbeat",
       "target_device_id": "dev-011"
     },
     {
-      "event_id": "252b0bd3",
-      "timestamp": "2026-08-23T21:21:44.935292",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a3ec0741",
-      "timestamp": "2026-08-23T21:22:32.972618",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "c3142fe7",
-      "timestamp": "2026-08-23T21:22:42.600556",
-      "device_id": "dev-035",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "4b494e47",
-      "timestamp": "2026-08-23T21:23:27.237714",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "849a3685",
-      "timestamp": "2026-08-23T21:23:30.299855",
-      "device_id": "dev-033",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "1a23bfb0",
-      "timestamp": "2026-08-23T21:23:51.928915",
+      "event_id": "b9bb1337",
+      "timestamp": "2026-08-23T20:03:20.401890",
       "device_id": "dev-043",
       "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "c736f165",
+      "timestamp": "2026-08-23T20:03:22.467622",
+      "device_id": "dev-034",
+      "floor": 3,
       "event_type": "login",
       "target_device_id": null,
       "user": "Operator Delta-4"
     },
     {
-      "event_id": "9924e32e",
-      "timestamp": "2026-08-23T21:24:10.239582",
-      "device_id": "dev-004",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "727796ae",
-      "timestamp": "2026-08-23T21:24:32.395456",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e943f9c8",
-      "timestamp": "2026-08-23T21:24:40.973305",
-      "device_id": "dev-004",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "7ad401e9",
-      "timestamp": "2026-08-23T21:25:04.236261",
-      "device_id": "dev-040",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "2b57a90d",
-      "timestamp": "2026-08-23T21:25:13.330082",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ba1622b3",
-      "timestamp": "2026-08-23T21:25:53.593670",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "3f228c24",
-      "timestamp": "2026-08-23T21:26:24",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "anomalous_outbound_connection",
-      "target_device_id": null,
-      "note": "unexpected outbound connection volume"
-    },
-    {
-      "event_id": "c3836fc4",
-      "timestamp": "2026-08-23T21:26:27.036249",
-      "device_id": "dev-005",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "7be60563",
-      "timestamp": "2026-08-23T21:26:59.780626",
-      "device_id": "dev-028",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "393913ed",
-      "timestamp": "2026-08-23T21:27:06.690357",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "4b44c5d4",
-      "timestamp": "2026-08-23T21:27:11.011078",
-      "device_id": "dev-014",
-      "floor": 1,
-      "event_type": "suspicious_auth_attempt",
-      "target_device_id": null,
-      "auth_result": "failed_then_succeeded",
-      "attempts": 4,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "2f9bbd9f",
-      "timestamp": "2026-08-23T21:27:20.338762",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "lateral_movement",
-      "target_device_id": "dev-014",
-      "network_segment_crossed": true
-    },
-    {
-      "event_id": "2f9bbd9f",
-      "timestamp": "2026-08-23T21:27:20.338762",
-      "device_id": "dev-027",
-      "floor": 3,
-      "event_type": "lateral_movement",
-      "target_device_id": "dev-014",
-      "network_segment_crossed": true
-    },
-    {
-      "event_id": "de3485b0",
-      "timestamp": "2026-08-23T21:27:21.042839",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "f63e60ba",
-      "timestamp": "2026-08-23T21:27:28.295193",
-      "device_id": "dev-017",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "2c1c053c",
-      "timestamp": "2026-08-23T21:27:37.178016",
-      "device_id": "dev-014",
-      "floor": 1,
-      "event_type": "privilege_escalation",
-      "target_device_id": null,
-      "escalated_to": "admin",
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "6b9c2312",
-      "timestamp": "2026-08-23T21:28:09.825246",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "4a8253ba",
-      "timestamp": "2026-08-23T21:28:37.625509",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "9830062a",
-      "timestamp": "2026-08-23T21:28:49.154803",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Echo-5"
-    },
-    {
-      "event_id": "bf44b9e8",
-      "timestamp": "2026-08-23T21:28:53.115988",
-      "device_id": "dev-032",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "4789b807",
-      "timestamp": "2026-08-23T21:29:08.712820",
-      "device_id": "dev-009",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "283cc289",
-      "timestamp": "2026-08-23T21:29:10.866172",
-      "device_id": "dev-024",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "0b2917cf",
-      "timestamp": "2026-08-23T21:29:13.930211",
-      "device_id": "dev-024",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "e42fc57d",
-      "timestamp": "2026-08-23T21:29:21.904688",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "aeddef71",
-      "timestamp": "2026-08-23T21:29:24.487259",
+      "event_id": "14e39d5a",
+      "timestamp": "2026-08-23T20:04:31.869799",
       "device_id": "dev-001",
       "floor": 1,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "eededd5f",
-      "timestamp": "2026-08-23T21:29:29.363804",
-      "device_id": "dev-020",
-      "floor": 2,
+      "event_id": "a11085cf",
+      "timestamp": "2026-08-23T20:04:40.825560",
+      "device_id": "dev-010",
+      "floor": 1,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "d8611693",
-      "timestamp": "2026-08-23T21:30:06.392544",
-      "device_id": "dev-029",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "a7723cff",
-      "timestamp": "2026-08-23T21:30:13.210804",
-      "device_id": "dev-044",
-      "floor": 4,
+      "event_id": "d7f1505a",
+      "timestamp": "2026-08-23T20:05:01.005685",
+      "device_id": "dev-003",
+      "floor": 1,
       "event_type": "login",
       "target_device_id": null,
       "user": "Operator Delta-4"
     },
     {
-      "event_id": "b6eb0e6a",
-      "timestamp": "2026-08-23T21:30:26.428035",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "0ab66fdd",
-      "timestamp": "2026-08-23T21:31:05.549255",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "cfa44804",
-      "timestamp": "2026-08-23T21:31:24.692478",
-      "device_id": "dev-033",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "107eb8f9",
-      "timestamp": "2026-08-23T21:31:37.234138",
-      "device_id": "dev-021",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "94369c7b",
-      "timestamp": "2026-08-23T21:33:08.407438",
-      "device_id": "dev-032",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "00504243",
-      "timestamp": "2026-08-23T21:33:16.728175",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "46662b48",
-      "timestamp": "2026-08-23T21:33:42.682253",
-      "device_id": "dev-021",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "4dcb4c75",
-      "timestamp": "2026-08-23T21:33:42.715761",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "eaf3a92c",
-      "timestamp": "2026-08-23T21:34:13.205247",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "2c8bac69",
-      "timestamp": "2026-08-23T21:34:29.749672",
-      "device_id": "dev-039",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "504858d8",
-      "timestamp": "2026-08-23T21:35:26.324822",
-      "device_id": "dev-050",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "dac8f68a",
-      "timestamp": "2026-08-23T21:35:26.762240",
-      "device_id": "dev-017",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "08ec5918",
-      "timestamp": "2026-08-23T21:36:06.182014",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "eea9d5aa",
-      "timestamp": "2026-08-23T21:36:41.846622",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b919ff48",
-      "timestamp": "2026-08-23T21:36:53.838919",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "6ba03ee7",
-      "timestamp": "2026-08-23T21:37:11.509432",
-      "device_id": "dev-018",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "6593f08f",
-      "timestamp": "2026-08-23T21:37:17.983943",
-      "device_id": "dev-036",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d7594152",
-      "timestamp": "2026-08-23T21:37:19.605463",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "12865aab",
-      "timestamp": "2026-08-23T21:37:26.385753",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-025"
-    },
-    {
-      "event_id": "0a176319",
-      "timestamp": "2026-08-23T21:38:06.957758",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "8ff1003f",
-      "timestamp": "2026-08-23T21:38:58.454142",
-      "device_id": "dev-020",
-      "floor": 2,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "d15f9299",
-      "timestamp": "2026-08-23T21:39:16.719895",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "5a8b659e",
-      "timestamp": "2026-08-23T21:39:44.169298",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "79d62c19",
-      "timestamp": "2026-08-23T21:39:44.580845",
-      "device_id": "dev-007",
-      "floor": 1,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "b752ad7f",
-      "timestamp": "2026-08-23T21:39:56.963232",
-      "device_id": "dev-041",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "14293ce5",
-      "timestamp": "2026-08-23T21:40:24.221614",
-      "device_id": "dev-047",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "b8b48880",
-      "timestamp": "2026-08-23T21:40:46.814141",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "e5631667",
-      "timestamp": "2026-08-23T21:41:08.284294",
-      "device_id": "dev-038",
-      "floor": 4,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "61fcef93",
-      "timestamp": "2026-08-23T21:41:25.148502",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Alpha-1"
-    },
-    {
-      "event_id": "60da50b5",
-      "timestamp": "2026-08-23T21:42:25.450471",
-      "device_id": "dev-046",
-      "floor": 4,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-047"
-    },
-    {
-      "event_id": "5a511cf3",
-      "timestamp": "2026-08-23T21:43:03.657238",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "39f57b60",
-      "timestamp": "2026-08-23T21:43:32.181562",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "ff989a0d",
-      "timestamp": "2026-08-23T21:43:48.577169",
-      "device_id": "dev-054",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a390b51d",
-      "timestamp": "2026-08-23T21:44:35.543390",
+      "event_id": "94a21d5b",
+      "timestamp": "2026-08-23T20:05:16.227543",
       "device_id": "dev-013",
       "floor": 1,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "2e1b972f",
-      "timestamp": "2026-08-23T21:46:29.014815",
-      "device_id": "dev-002",
-      "floor": 1,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "69a76e5e",
-      "timestamp": "2026-08-23T21:46:31.853719",
-      "device_id": "dev-037",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "25640e7f",
-      "timestamp": "2026-08-23T21:46:49.625442",
-      "device_id": "dev-053",
-      "floor": 5,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-058"
-    },
-    {
-      "event_id": "3aac2dac",
-      "timestamp": "2026-08-23T21:47:10.619486",
-      "device_id": "dev-034",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "738740b7",
-      "timestamp": "2026-08-23T21:47:56.236676",
-      "device_id": "dev-003",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "eb5177bc",
-      "timestamp": "2026-08-23T21:48:45.954285",
-      "device_id": "dev-006",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "d6ad7e05",
-      "timestamp": "2026-08-23T21:48:56.177865",
-      "device_id": "dev-014",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Foxtrot-6"
-    },
-    {
-      "event_id": "6cda7337",
-      "timestamp": "2026-08-23T21:49:05.479521",
-      "device_id": "dev-013",
-      "floor": 1,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-011"
-    },
-    {
-      "event_id": "ee26631e",
-      "timestamp": "2026-08-23T21:49:36.181894",
-      "device_id": "dev-008",
-      "floor": 1,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "47969806",
-      "timestamp": "2026-08-23T21:49:57.045570",
+      "event_id": "d279d92e",
+      "timestamp": "2026-08-23T20:05:16.969322",
       "device_id": "dev-028",
       "floor": 3,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "df250e42",
-      "timestamp": "2026-08-23T21:50:42.575237",
-      "device_id": "dev-049",
-      "floor": 5,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "901f7b0a",
-      "timestamp": "2026-08-23T21:51:19.042943",
-      "device_id": "dev-029",
-      "floor": 3,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "1a7ef64c",
-      "timestamp": "2026-08-23T21:51:38.881206",
-      "device_id": "dev-023",
-      "floor": 2,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Delta-4"
-    },
-    {
-      "event_id": "190d8f7e",
-      "timestamp": "2026-08-23T21:51:41.842639",
-      "device_id": "dev-044",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Charlie-3"
-    },
-    {
-      "event_id": "a402e54a",
-      "timestamp": "2026-08-23T21:51:46.844025",
+      "event_id": "399a70a6",
+      "timestamp": "2026-08-23T20:05:49.959148",
       "device_id": "dev-047",
       "floor": 4,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "cf8163c2",
-      "timestamp": "2026-08-23T21:51:48.712543",
-      "device_id": "dev-020",
+      "event_id": "56688894",
+      "timestamp": "2026-08-23T20:06:26.419338",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "30d95423",
+      "timestamp": "2026-08-23T20:06:34.764002",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f4929e57",
+      "timestamp": "2026-08-23T20:06:47.140075",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "e3e23a7a",
+      "timestamp": "2026-08-23T20:07:02.736604",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0d2e79ba",
+      "timestamp": "2026-08-23T20:07:06.574110",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "17f0f0d0",
+      "timestamp": "2026-08-23T20:07:07.187169",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0d5f729d",
+      "timestamp": "2026-08-23T20:07:18.012553",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "5e76989f",
+      "timestamp": "2026-08-23T20:07:57.643832",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "c51f8d32",
+      "timestamp": "2026-08-23T20:08:43.884174",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "1514f540",
+      "timestamp": "2026-08-23T20:09:15.408859",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e1fbdef3",
+      "timestamp": "2026-08-23T20:09:17.495677",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "a420081e",
+      "timestamp": "2026-08-23T20:09:20.535499",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fa49278c",
+      "timestamp": "2026-08-23T20:09:24.548134",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "e291eff2",
+      "timestamp": "2026-08-23T20:09:29.244546",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "bbfbf839",
+      "timestamp": "2026-08-23T20:09:53.034504",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "76a24596",
+      "timestamp": "2026-08-23T20:09:55.754157",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "580543bd",
+      "timestamp": "2026-08-23T20:10:00.705706",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a28acb08",
+      "timestamp": "2026-08-23T20:10:23.340687",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "eb398d9e",
+      "timestamp": "2026-08-23T20:10:41.028217",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "adb31f15",
+      "timestamp": "2026-08-23T20:10:53.008917",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1ffafd1c",
+      "timestamp": "2026-08-23T20:11:58.367681",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e3d5117c",
+      "timestamp": "2026-08-23T20:12:15.852022",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "277439f1",
+      "timestamp": "2026-08-23T20:12:34.098533",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "50ef4aa0",
+      "timestamp": "2026-08-23T20:12:42.761139",
+      "device_id": "dev-046",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Foxtrot-6"
+    },
+    {
+      "event_id": "c6eb0ad6",
+      "timestamp": "2026-08-23T20:13:31.758950",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "608284c5",
+      "timestamp": "2026-08-23T20:13:35.011816",
+      "device_id": "dev-018",
       "floor": 2,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "03b7c004",
-      "timestamp": "2026-08-23T21:51:53.896154",
+      "event_id": "2a23fdb1",
+      "timestamp": "2026-08-23T20:14:01.752963",
       "device_id": "dev-011",
       "floor": 1,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "39459d23",
-      "timestamp": "2026-08-23T21:51:58.410488",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "6733f47a",
-      "timestamp": "2026-08-23T21:52:08.376594",
-      "device_id": "dev-015",
-      "floor": 2,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "52b69a4f",
-      "timestamp": "2026-08-23T21:52:17.378330",
-      "device_id": "dev-055",
-      "floor": 5,
-      "event_type": "badge_swipe",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a2736dea",
-      "timestamp": "2026-08-23T21:53:13.541753",
-      "device_id": "dev-031",
-      "floor": 3,
-      "event_type": "network_heartbeat",
-      "target_device_id": "dev-036"
-    },
-    {
-      "event_id": "0c335c3a",
-      "timestamp": "2026-08-23T21:53:31.507790",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "3606c3c8",
-      "timestamp": "2026-08-23T21:54:03.519801",
-      "device_id": "dev-057",
-      "floor": 5,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
-    },
-    {
-      "event_id": "d9ad1345",
-      "timestamp": "2026-08-23T21:54:54.550724",
-      "device_id": "dev-042",
-      "floor": 4,
-      "event_type": "sensor_ping",
-      "target_device_id": null
-    },
-    {
-      "event_id": "a8a928dd",
-      "timestamp": "2026-08-23T21:56:04.227736",
-      "device_id": "dev-044",
+      "event_id": "7d12c953",
+      "timestamp": "2026-08-23T20:14:04.855458",
+      "device_id": "dev-043",
       "floor": 4,
       "event_type": "network_heartbeat",
       "target_device_id": "dev-047"
     },
     {
-      "event_id": "e8cddbf6",
-      "timestamp": "2026-08-23T21:57:42.708208",
+      "event_id": "d5511d51",
+      "timestamp": "2026-08-23T20:14:11.011829",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "c21902ff",
+      "timestamp": "2026-08-23T20:14:13.462254",
+      "device_id": "dev-007",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "41299a08",
+      "timestamp": "2026-08-23T20:16:39.284931",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Foxtrot-6"
+    },
+    {
+      "event_id": "54ddafd4",
+      "timestamp": "2026-08-23T20:18:15.125117",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b3d749c0",
+      "timestamp": "2026-08-23T20:18:35.218962",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e50f98b0",
+      "timestamp": "2026-08-23T20:18:59.537185",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3c29765c",
+      "timestamp": "2026-08-23T20:19:05.187556",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "095328f5",
+      "timestamp": "2026-08-23T20:19:30.727912",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1345eb5c",
+      "timestamp": "2026-08-23T20:19:35.441853",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f67b0818",
+      "timestamp": "2026-08-23T20:20:15.209250",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "802918e4",
+      "timestamp": "2026-08-23T20:21:13.925757",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2d80f912",
+      "timestamp": "2026-08-23T20:21:23.037938",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "f9d14f41",
+      "timestamp": "2026-08-23T20:21:28.152710",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fde2165b",
+      "timestamp": "2026-08-23T20:21:33.911042",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "65f8f549",
+      "timestamp": "2026-08-23T20:22:17.046523",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "84638da4",
+      "timestamp": "2026-08-23T20:22:21.904805",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "9595e704",
+      "timestamp": "2026-08-23T20:22:24.193504",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "717aa617",
+      "timestamp": "2026-08-23T20:22:25.368084",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "dfe1f028",
+      "timestamp": "2026-08-23T20:23:00.086541",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2cf78084",
+      "timestamp": "2026-08-23T20:23:35.521393",
       "device_id": "dev-008",
       "floor": 1,
       "event_type": "network_heartbeat",
       "target_device_id": "dev-011"
     },
     {
-      "event_id": "026163d7",
-      "timestamp": "2026-08-23T21:58:17.922184",
-      "device_id": "dev-046",
-      "floor": 4,
-      "event_type": "login",
-      "target_device_id": null,
-      "user": "Operator Bravo-2"
+      "event_id": "25cbd8fb",
+      "timestamp": "2026-08-23T20:23:48.984282",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
     },
     {
-      "event_id": "293416d0",
-      "timestamp": "2026-08-23T21:58:32.603893",
-      "device_id": "dev-055",
-      "floor": 5,
+      "event_id": "657a132e",
+      "timestamp": "2026-08-23T20:23:53.144649",
+      "device_id": "dev-046",
+      "floor": 4,
       "event_type": "badge_swipe",
       "target_device_id": null
     },
     {
-      "event_id": "90af6946",
-      "timestamp": "2026-08-23T21:58:45.337337",
-      "device_id": "dev-046",
+      "event_id": "df451f01",
+      "timestamp": "2026-08-23T20:24:18.376999",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d4417e71",
+      "timestamp": "2026-08-23T20:24:57.890533",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "cad0c351",
+      "timestamp": "2026-08-23T20:25:10.575968",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9b16f928",
+      "timestamp": "2026-08-23T20:26:19.134322",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d1e2ec36",
+      "timestamp": "2026-08-23T20:27:07.567797",
+      "device_id": "dev-037",
       "floor": 4,
       "event_type": "network_heartbeat",
       "target_device_id": "dev-047"
     },
     {
-      "event_id": "02b23f2f",
-      "timestamp": "2026-08-23T21:58:55.942001",
+      "event_id": "9b2c8a55",
+      "timestamp": "2026-08-23T20:27:23.613428",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "3aa9d785",
+      "timestamp": "2026-08-23T20:29:21.489956",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "00a09177",
+      "timestamp": "2026-08-23T20:30:00.401588",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0a50af9c",
+      "timestamp": "2026-08-23T20:30:26.087273",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "e000ef38",
+      "timestamp": "2026-08-23T20:30:26.275302",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "ac059f53",
+      "timestamp": "2026-08-23T20:30:37.930823",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "b6ddaae2",
+      "timestamp": "2026-08-23T20:30:38.491882",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "22d64304",
+      "timestamp": "2026-08-23T20:31:35.404982",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "140cc59c",
+      "timestamp": "2026-08-23T20:32:45.140318",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e3e3f8fa",
+      "timestamp": "2026-08-23T20:34:00.759068",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "26784291",
+      "timestamp": "2026-08-23T20:34:10.683879",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7fa539d4",
+      "timestamp": "2026-08-23T20:34:24.186741",
+      "device_id": "dev-048",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "05dafe3b",
+      "timestamp": "2026-08-23T20:34:24.264726",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "479b325a",
+      "timestamp": "2026-08-23T20:34:30.012047",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "81d82ada",
+      "timestamp": "2026-08-23T20:34:37.032210",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "048bfe53",
+      "timestamp": "2026-08-23T20:35:43.354179",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "951404fd",
+      "timestamp": "2026-08-23T20:35:48.981976",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ae9bb9e1",
+      "timestamp": "2026-08-23T20:36:35.203647",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1c1e34ed",
+      "timestamp": "2026-08-23T20:37:26.710375",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "027f47f9",
+      "timestamp": "2026-08-23T20:37:51.533563",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "82d8be54",
+      "timestamp": "2026-08-23T20:37:52.991845",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "43d3480d",
+      "timestamp": "2026-08-23T20:38:33.353490",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8e309bfb",
+      "timestamp": "2026-08-23T20:38:34.453082",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "22c3a933",
+      "timestamp": "2026-08-23T20:38:34.971415",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0a3008b8",
+      "timestamp": "2026-08-23T20:38:38.418542",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0d4c9f28",
+      "timestamp": "2026-08-23T20:38:43.894986",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "551f3a6b",
+      "timestamp": "2026-08-23T20:38:48.019022",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "599a8b68",
+      "timestamp": "2026-08-23T20:39:08.775844",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "86a0cd3d",
+      "timestamp": "2026-08-23T20:39:12.859133",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "306edc1d",
+      "timestamp": "2026-08-23T20:39:29.023199",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e35aec92",
+      "timestamp": "2026-08-23T20:40:01.593061",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "e30525d1",
+      "timestamp": "2026-08-23T20:40:06.200962",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d1d9f3b0",
+      "timestamp": "2026-08-23T20:40:14.308672",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "e5fa3920",
+      "timestamp": "2026-08-23T20:41:34.303779",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "5a20c783",
+      "timestamp": "2026-08-23T20:41:48.272678",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "49e56504",
+      "timestamp": "2026-08-23T20:42:01.066961",
+      "device_id": "dev-047",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b95cf5c1",
+      "timestamp": "2026-08-23T20:42:30.917796",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "753aefe8",
+      "timestamp": "2026-08-23T20:43:01.261502",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "84ad89f1",
+      "timestamp": "2026-08-23T20:44:24.630591",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "85548654",
+      "timestamp": "2026-08-23T20:44:31.086494",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f6b603e4",
+      "timestamp": "2026-08-23T20:44:46.099667",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "fae71497",
+      "timestamp": "2026-08-23T20:44:49.377369",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "b750dfad",
+      "timestamp": "2026-08-23T20:46:37.093584",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "133b8411",
+      "timestamp": "2026-08-23T20:46:49.986350",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "6793c12f",
+      "timestamp": "2026-08-23T20:47:49.212583",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "b46d9f4d",
+      "timestamp": "2026-08-23T20:48:04.078496",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "3b97d3a0",
+      "timestamp": "2026-08-23T20:48:08.233757",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8cfde639",
+      "timestamp": "2026-08-23T20:49:21.197612",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bf7f65cf",
+      "timestamp": "2026-08-23T20:50:07.660703",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "2af33821",
+      "timestamp": "2026-08-23T20:50:56.410466",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "161275e8",
+      "timestamp": "2026-08-23T20:51:10.827284",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": null
+    },
+    {
+      "event_id": "89db1963",
+      "timestamp": "2026-08-23T20:51:15.692573",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a8e56e27",
+      "timestamp": "2026-08-23T20:51:18.225981",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a179fc45",
+      "timestamp": "2026-08-23T20:51:41.226369",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f17a4a15",
+      "timestamp": "2026-08-23T20:52:37.687812",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "aba8a1bb",
+      "timestamp": "2026-08-23T20:52:41.405592",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ebe6ca24",
+      "timestamp": "2026-08-23T20:52:55.694094",
+      "device_id": "dev-047",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "588bc112",
+      "timestamp": "2026-08-23T20:53:23.612183",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "effa861a",
+      "timestamp": "2026-08-23T20:53:33.226641",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "a24ccbe5",
+      "timestamp": "2026-08-23T20:54:29.649791",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b46f4a01",
+      "timestamp": "2026-08-23T20:55:03.260128",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8b7bee54",
+      "timestamp": "2026-08-23T20:55:35.112825",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4add639e",
+      "timestamp": "2026-08-23T20:55:59.403161",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "077569eb",
+      "timestamp": "2026-08-23T20:56:00.838444",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e76a1305",
+      "timestamp": "2026-08-23T20:56:07.153522",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "86540e23",
+      "timestamp": "2026-08-23T20:56:31.729816",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "99abdde3",
+      "timestamp": "2026-08-23T20:56:32.428728",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1f836f97",
+      "timestamp": "2026-08-23T20:56:39.645139",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "8a9596b6",
+      "timestamp": "2026-08-23T20:56:41.770984",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "888cf4b3",
+      "timestamp": "2026-08-23T20:57:11.643391",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "1ad6c0ae",
+      "timestamp": "2026-08-23T20:57:17.718783",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "e2ef1fbf",
+      "timestamp": "2026-08-23T20:57:59.200995",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "d9ad0484",
+      "timestamp": "2026-08-23T20:58:00.865246",
+      "device_id": "dev-042",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ce068b1f",
+      "timestamp": "2026-08-23T20:58:20.888541",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "7011961a",
+      "timestamp": "2026-08-23T20:59:22.446175",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7ae8810d",
+      "timestamp": "2026-08-23T20:59:35.913634",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ed53c56c",
+      "timestamp": "2026-08-23T20:59:41.371727",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d3333446",
+      "timestamp": "2026-08-23T21:00:04.905740",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "91b34c21",
+      "timestamp": "2026-08-23T21:00:20.746450",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ac40fc5b",
+      "timestamp": "2026-08-23T21:00:36.532173",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "73edc21a",
+      "timestamp": "2026-08-23T21:00:49.726703",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "8be55557",
+      "timestamp": "2026-08-23T21:04:11.818452",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "64cfeb39",
+      "timestamp": "2026-08-23T21:05:25.234758",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "d0a38328",
+      "timestamp": "2026-08-23T21:05:37.629255",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "01ef7f3f",
+      "timestamp": "2026-08-23T21:05:46.773453",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "b37d34b4",
+      "timestamp": "2026-08-23T21:05:48.080750",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fff6b1da",
+      "timestamp": "2026-08-23T21:06:07.613698",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "10c00a7c",
+      "timestamp": "2026-08-23T21:06:28.956737",
+      "device_id": "dev-043",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "3fdbcc57",
+      "timestamp": "2026-08-23T21:06:29.355057",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "e17e3180",
+      "timestamp": "2026-08-23T21:06:40.583356",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "8be9f008",
+      "timestamp": "2026-08-23T21:06:58.504537",
+      "device_id": "dev-012",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "3834645e",
+      "timestamp": "2026-08-23T21:07:15.530417",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "a23eb697",
+      "timestamp": "2026-08-23T21:07:19.907003",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "89b043f9",
+      "timestamp": "2026-08-23T21:07:23.936638",
+      "device_id": "dev-058",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "07d4d4bd",
+      "timestamp": "2026-08-23T21:07:42.216549",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "5be496f6",
+      "timestamp": "2026-08-23T21:07:53.467576",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "2c70ca62",
+      "timestamp": "2026-08-23T21:08:08.532087",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "0f91edf1",
+      "timestamp": "2026-08-23T21:08:13.292984",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "14d227a8",
+      "timestamp": "2026-08-23T21:08:22.946507",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "143c4ef8",
+      "timestamp": "2026-08-23T21:09:35.386336",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d17e6a75",
+      "timestamp": "2026-08-23T21:09:52.632320",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "7bf21617",
+      "timestamp": "2026-08-23T21:10:44.258663",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "b4e0dbf2",
+      "timestamp": "2026-08-23T21:11:11.313422",
+      "device_id": "dev-024",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "54a85ec8",
+      "timestamp": "2026-08-23T21:11:33.141577",
+      "device_id": "dev-020",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "68fdb169",
+      "timestamp": "2026-08-23T21:12:08.049270",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "c610076b",
+      "timestamp": "2026-08-23T21:12:10.274859",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "8ca6cc88",
+      "timestamp": "2026-08-23T21:12:38.980646",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "08ed95ae",
+      "timestamp": "2026-08-23T21:12:52.417591",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9a4f4a50",
+      "timestamp": "2026-08-23T21:13:04.079842",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "aa68903b",
+      "timestamp": "2026-08-23T21:13:21.810606",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "feeb4184",
+      "timestamp": "2026-08-23T21:13:53.124059",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "6ce9b450",
+      "timestamp": "2026-08-23T21:14:35.030265",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "8ca4ae8a",
+      "timestamp": "2026-08-23T21:14:44.923779",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "f8c70476",
+      "timestamp": "2026-08-23T21:14:47.922843",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "13df77b8",
+      "timestamp": "2026-08-23T21:15:00.932544",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "4b0b0ac9",
+      "timestamp": "2026-08-23T21:15:02.238597",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "7d143af6",
+      "timestamp": "2026-08-23T21:15:05.473633",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "55512cb9",
+      "timestamp": "2026-08-23T21:15:40.284816",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b6e44264",
+      "timestamp": "2026-08-23T21:16:22.612146",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f2169bac",
+      "timestamp": "2026-08-23T21:17:01.589773",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3e6e0c61",
+      "timestamp": "2026-08-23T21:17:48.188614",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "dc2857bb",
+      "timestamp": "2026-08-23T21:18:00.804636",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "be4e612f",
+      "timestamp": "2026-08-23T21:18:09.514582",
+      "device_id": "dev-011",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "3281d995",
+      "timestamp": "2026-08-23T21:18:15.963548",
+      "device_id": "dev-006",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "9d6aab8d",
+      "timestamp": "2026-08-23T21:18:44.717883",
+      "device_id": "dev-030",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ef987379",
+      "timestamp": "2026-08-23T21:19:11.463008",
+      "device_id": "dev-005",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f9213a2d",
+      "timestamp": "2026-08-23T21:19:23.756802",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a6fbe6a0",
+      "timestamp": "2026-08-23T21:19:46.843634",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "145919fe",
+      "timestamp": "2026-08-23T21:21:40.656478",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "f4354499",
+      "timestamp": "2026-08-23T21:21:59.446875",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "b1e66a20",
+      "timestamp": "2026-08-23T21:22:02.864491",
       "device_id": "dev-025",
       "floor": 2,
       "event_type": "sensor_ping",
       "target_device_id": null
     },
     {
-      "event_id": "8a19dac4",
-      "timestamp": "2026-08-23T21:59:15.288182",
+      "event_id": "d8fcb6b8",
+      "timestamp": "2026-08-23T21:22:04.362999",
+      "device_id": "dev-008",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "a06078d6",
+      "timestamp": "2026-08-23T21:22:24.237084",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "069304c4",
+      "timestamp": "2026-08-23T21:22:31.408270",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "69287c98",
+      "timestamp": "2026-08-23T21:22:34.150421",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "ea8e84e3",
+      "timestamp": "2026-08-23T21:22:48.797159",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "ba3f7d22",
+      "timestamp": "2026-08-23T21:22:52.055933",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "fd31df64",
+      "timestamp": "2026-08-23T21:22:55.721338",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "90c695bc",
+      "timestamp": "2026-08-23T21:22:58.201513",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "b66576a7",
+      "timestamp": "2026-08-23T21:23:12.191763",
+      "device_id": "dev-013",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "655958e5",
+      "timestamp": "2026-08-23T21:23:19.924147",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c4bbd030",
+      "timestamp": "2026-08-23T21:23:20.467486",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "875e9514",
+      "timestamp": "2026-08-23T21:23:47.783604",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "d026c69f",
+      "timestamp": "2026-08-23T21:23:49.038209",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "531799c9",
+      "timestamp": "2026-08-23T21:23:58.747139",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Foxtrot-6"
+    },
+    {
+      "event_id": "98aba7e5",
+      "timestamp": "2026-08-23T21:24:55.975314",
+      "device_id": "dev-040",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4eae19d9",
+      "timestamp": "2026-08-23T21:25:22.346780",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "aef141a6",
+      "timestamp": "2026-08-23T21:25:26.646765",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "e94d9e79",
+      "timestamp": "2026-08-23T21:25:58.209226",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e43e35ad",
+      "timestamp": "2026-08-23T21:26:24",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "anomalous_outbound_connection",
+      "target_device_id": null,
+      "note": "unexpected outbound connection volume"
+    },
+    {
+      "event_id": "8934d719",
+      "timestamp": "2026-08-23T21:26:25.429957",
+      "device_id": "dev-003",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2c08db5e",
+      "timestamp": "2026-08-23T21:26:35.895795",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "9bdb6219",
+      "timestamp": "2026-08-23T21:26:55.261070",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "lateral_movement",
+      "target_device_id": "dev-014",
+      "network_segment_crossed": true
+    },
+    {
+      "event_id": "9bdb6219",
+      "timestamp": "2026-08-23T21:26:55.261070",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "lateral_movement",
+      "target_device_id": "dev-014",
+      "network_segment_crossed": true
+    },
+    {
+      "event_id": "135590a9",
+      "timestamp": "2026-08-23T21:26:59.389015",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "f084ea9d",
+      "timestamp": "2026-08-23T21:27:31.084205",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "66b356aa",
+      "timestamp": "2026-08-23T21:27:33.715607",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "suspicious_auth_attempt",
+      "target_device_id": null,
+      "auth_result": "failed_then_succeeded",
+      "attempts": 4,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "3d5eaee7",
+      "timestamp": "2026-08-23T21:27:36.731736",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c7afa6aa",
+      "timestamp": "2026-08-23T21:28:22.023587",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "privilege_escalation",
+      "target_device_id": null,
+      "escalated_to": "admin",
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "1af11be8",
+      "timestamp": "2026-08-23T21:28:26.479164",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "6c18169f",
+      "timestamp": "2026-08-23T21:28:44.156229",
+      "device_id": "dev-009",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e59420c9",
+      "timestamp": "2026-08-23T21:30:01.009188",
+      "device_id": "dev-015",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "c414b638",
+      "timestamp": "2026-08-23T21:30:30.336758",
+      "device_id": "dev-050",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "6f878e9d",
+      "timestamp": "2026-08-23T21:30:31.990961",
+      "device_id": "dev-052",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "bf185a6f",
+      "timestamp": "2026-08-23T21:32:05.737548",
+      "device_id": "dev-053",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "51320d60",
+      "timestamp": "2026-08-23T21:32:11.679720",
+      "device_id": "dev-019",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4c13e860",
+      "timestamp": "2026-08-23T21:32:33.982094",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Foxtrot-6"
+    },
+    {
+      "event_id": "d66a4aa7",
+      "timestamp": "2026-08-23T21:33:18.920545",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "3dce0f9e",
+      "timestamp": "2026-08-23T21:33:50.642732",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "de034346",
+      "timestamp": "2026-08-23T21:34:13.914090",
+      "device_id": "dev-014",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "8725e94e",
+      "timestamp": "2026-08-23T21:34:27.053081",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4da253f5",
+      "timestamp": "2026-08-23T21:34:34.366229",
       "device_id": "dev-056",
       "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "6a7568d7",
+      "timestamp": "2026-08-23T21:34:48.971105",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f73dfd88",
+      "timestamp": "2026-08-23T21:35:30.604139",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "84b93be4",
+      "timestamp": "2026-08-23T21:35:41.849884",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "7bdf787d",
+      "timestamp": "2026-08-23T21:35:42.852366",
+      "device_id": "dev-049",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "87097164",
+      "timestamp": "2026-08-23T21:36:07.997194",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "2efd5158",
+      "timestamp": "2026-08-23T21:36:37.234369",
+      "device_id": "dev-038",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "2e1a73ed",
+      "timestamp": "2026-08-23T21:36:39.843864",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "ec854865",
+      "timestamp": "2026-08-23T21:37:54.829296",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "713f0ea1",
+      "timestamp": "2026-08-23T21:38:03.101532",
+      "device_id": "dev-039",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "c881d662",
+      "timestamp": "2026-08-23T21:39:25.644307",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "f65b90a5",
+      "timestamp": "2026-08-23T21:39:36.281237",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "219ead9b",
+      "timestamp": "2026-08-23T21:39:44.185237",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "3494cd74",
+      "timestamp": "2026-08-23T21:40:57.099227",
+      "device_id": "dev-037",
+      "floor": 4,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "615f9ff4",
+      "timestamp": "2026-08-23T21:41:08.735420",
+      "device_id": "dev-055",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Foxtrot-6"
+    },
+    {
+      "event_id": "71e20e1d",
+      "timestamp": "2026-08-23T21:41:27.869279",
+      "device_id": "dev-044",
+      "floor": 4,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "2f0dceb5",
+      "timestamp": "2026-08-23T21:41:44.406079",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8252e79e",
+      "timestamp": "2026-08-23T21:42:31.636278",
+      "device_id": "dev-051",
+      "floor": 5,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "c25bc2b9",
+      "timestamp": "2026-08-23T21:42:43.648746",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "5888e54f",
+      "timestamp": "2026-08-23T21:42:49.426998",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "72dc9329",
+      "timestamp": "2026-08-23T21:44:29.427097",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "52df461f",
+      "timestamp": "2026-08-23T21:44:44.294624",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "54ee7348",
+      "timestamp": "2026-08-23T21:44:44.995518",
+      "device_id": "dev-037",
+      "floor": 4,
       "event_type": "login",
       "target_device_id": null,
       "user": "Operator Bravo-2"
     },
     {
-      "event_id": "d9962449",
-      "timestamp": "2026-08-23T21:59:20.989417",
+      "event_id": "dd840ce6",
+      "timestamp": "2026-08-23T21:44:49.306074",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "00993580",
+      "timestamp": "2026-08-23T21:45:04.043922",
+      "device_id": "dev-027",
+      "floor": 3,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "33873026",
+      "timestamp": "2026-08-23T21:45:26.398787",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "2c9b447b",
+      "timestamp": "2026-08-23T21:45:42.065062",
+      "device_id": "dev-045",
+      "floor": 4,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-047"
+    },
+    {
+      "event_id": "b95d4390",
+      "timestamp": "2026-08-23T21:45:53.320087",
+      "device_id": "dev-010",
+      "floor": 1,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "7f44e7de",
+      "timestamp": "2026-08-23T21:46:48.894146",
+      "device_id": "dev-033",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "1723ecaa",
+      "timestamp": "2026-08-23T21:48:54.103741",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "f0c0cd1d",
+      "timestamp": "2026-08-23T21:48:59.357818",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "2e7941cc",
+      "timestamp": "2026-08-23T21:49:22.158819",
+      "device_id": "dev-007",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "a56ba919",
+      "timestamp": "2026-08-23T21:49:35.523533",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0bef467b",
+      "timestamp": "2026-08-23T21:49:44.770840",
+      "device_id": "dev-018",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "a57f6230",
+      "timestamp": "2026-08-23T21:49:50.098579",
+      "device_id": "dev-022",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-025"
+    },
+    {
+      "event_id": "ba2daa1b",
+      "timestamp": "2026-08-23T21:49:55.830236",
+      "device_id": "dev-017",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "765eb294",
+      "timestamp": "2026-08-23T21:50:36.408306",
+      "device_id": "dev-028",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "f47181ae",
+      "timestamp": "2026-08-23T21:50:38.975509",
+      "device_id": "dev-023",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "7442ba3b",
+      "timestamp": "2026-08-23T21:51:01.359295",
+      "device_id": "dev-035",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "e6d195d7",
+      "timestamp": "2026-08-23T21:51:25.057375",
+      "device_id": "dev-021",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "e0e417f2",
+      "timestamp": "2026-08-23T21:51:39.281877",
+      "device_id": "dev-036",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "243d0a0e",
+      "timestamp": "2026-08-23T21:52:03.542756",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "8b64db6e",
+      "timestamp": "2026-08-23T21:53:08.946248",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Alpha-1"
+    },
+    {
+      "event_id": "6b919c32",
+      "timestamp": "2026-08-23T21:53:08.970966",
+      "device_id": "dev-029",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "3ea84505",
+      "timestamp": "2026-08-23T21:53:25.844981",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Bravo-2"
+    },
+    {
+      "event_id": "27828ed0",
+      "timestamp": "2026-08-23T21:53:47.274631",
+      "device_id": "dev-034",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "0d1215cb",
+      "timestamp": "2026-08-23T21:53:48.635571",
+      "device_id": "dev-031",
+      "floor": 3,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Charlie-3"
+    },
+    {
+      "event_id": "b07c66dc",
+      "timestamp": "2026-08-23T21:53:50.650327",
+      "device_id": "dev-054",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "56b6aef9",
+      "timestamp": "2026-08-23T21:53:51.377668",
+      "device_id": "dev-056",
+      "floor": 5,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4bbe029b",
+      "timestamp": "2026-08-23T21:54:55.510384",
+      "device_id": "dev-001",
+      "floor": 1,
+      "event_type": "login",
+      "target_device_id": null,
+      "user": "Operator Delta-4"
+    },
+    {
+      "event_id": "9e802a97",
+      "timestamp": "2026-08-23T21:55:25.764134",
+      "device_id": "dev-057",
+      "floor": 5,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-058"
+    },
+    {
+      "event_id": "d92812f9",
+      "timestamp": "2026-08-23T21:55:36.279905",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "a91a8fcf",
+      "timestamp": "2026-08-23T21:56:02.428371",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-036"
+    },
+    {
+      "event_id": "e42472e3",
+      "timestamp": "2026-08-23T21:56:21.598696",
+      "device_id": "dev-004",
+      "floor": 1,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "7cc5641a",
+      "timestamp": "2026-08-23T21:57:44.695802",
+      "device_id": "dev-002",
+      "floor": 1,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "00814c42",
+      "timestamp": "2026-08-23T21:58:06.093581",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "88495278",
+      "timestamp": "2026-08-23T21:58:15.296232",
+      "device_id": "dev-026",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "48e02580",
+      "timestamp": "2026-08-23T21:58:15.464261",
+      "device_id": "dev-041",
+      "floor": 4,
+      "event_type": "sensor_ping",
+      "target_device_id": null
+    },
+    {
+      "event_id": "92394aae",
+      "timestamp": "2026-08-23T21:58:24.114055",
       "device_id": "dev-030",
       "floor": 3,
       "event_type": "login",
       "target_device_id": null,
       "user": "Operator Echo-5"
+    },
+    {
+      "event_id": "26146868",
+      "timestamp": "2026-08-23T21:59:08.562434",
+      "device_id": "dev-025",
+      "floor": 2,
+      "event_type": "network_heartbeat",
+      "target_device_id": "dev-011"
+    },
+    {
+      "event_id": "645efb14",
+      "timestamp": "2026-08-23T21:59:18.310165",
+      "device_id": "dev-032",
+      "floor": 3,
+      "event_type": "badge_swipe",
+      "target_device_id": null
+    },
+    {
+      "event_id": "4e9464a7",
+      "timestamp": "2026-08-23T21:59:55.306207",
+      "device_id": "dev-016",
+      "floor": 2,
+      "event_type": "badge_swipe",
+      "target_device_id": null
     }
   ],
   "ground_truth": {
     "attack_present": true,
-    "description": "Compromised IoT device on floor dev-027 pivots across a shared VLAN to a floor-1 server, followed by a suspicious auth attempt and privilege escalation.",
-    "attacker_id": "dev-027",
+    "description": "Compromised IoT device on floor dev-015 pivots across a shared VLAN to a floor-1 server, followed by a suspicious auth attempt and privilege escalation.",
+    "attacker_id": "dev-015",
     "server_id": "dev-014",
     "attack_window": [
       "2026-08-23T21:26:24",
-      "2026-08-23T21:27:37.178016"
+      "2026-08-23T21:28:22.023587"
     ],
-    "attack_user": "Operator Echo-5"
+    "attack_user": "Operator Bravo-2"
   }
 }

@@ -16,6 +16,7 @@ Weights are exposed in every response so callers can audit them.
 
 import json
 import math
+import uuid
 from datetime import datetime, timedelta
 from collections import defaultdict
 
@@ -32,23 +33,62 @@ load_dotenv()
 ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
 ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
 ALERT_WHATSAPP_NUMBER = os.getenv("ALERT_WHATSAPP_NUMBER")
+LOCKDOWN_SECRET = os.getenv("LOCKDOWN_SECRET", "aegis-lockdown-secret-key-2024")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 
 print(f"DEBUG: Loaded ULTRAMSG_INSTANCE_ID={ULTRAMSG_INSTANCE_ID}")
 print(f"DEBUG: Loaded ALERT_WHATSAPP_NUMBER={ALERT_WHATSAPP_NUMBER}")
+print(f"DEBUG: Loaded FRONTEND_URL={FRONTEND_URL}")
 
 LAST_NOTIFIED_ATTACK_PATH = None
+
+# ── Emergency Lockdown State ─────────────────────────────────────────────────
+EMERGENCY_LOCKDOWN = False          # Global lockdown flag
+LOCKDOWN_TOKENS = {}                # { token_str: { "created_at": datetime, "used": bool } }
+LOCKDOWN_TOKEN_TTL_MINUTES = 30     # Tokens expire after 30 minutes
+
+def generate_lockdown_token():
+    """Create a unique one-time token for emergency lockdown."""
+    token = uuid.uuid4().hex
+    LOCKDOWN_TOKENS[token] = {
+        "created_at": datetime.utcnow(),
+        "used": False
+    }
+    return token
+
+def validate_lockdown_token(token):
+    """
+    Validate a lockdown token. Returns (is_valid, error_message).
+    A token is valid if it exists, has not been used, and has not expired.
+    """
+    if not token or token not in LOCKDOWN_TOKENS:
+        return False, "Invalid or unknown token."
+    info = LOCKDOWN_TOKENS[token]
+    if info["used"]:
+        return False, "Token has already been used."
+    elapsed = (datetime.utcnow() - info["created_at"]).total_seconds() / 60
+    if elapsed > LOCKDOWN_TOKEN_TTL_MINUTES:
+        return False, f"Token expired ({int(elapsed)} minutes old, max {LOCKDOWN_TOKEN_TTL_MINUTES})."
+    return True, None
 
 def send_whatsapp_alert(score, path_chain, entry_floor, target_floor):
     if not all([ULTRAMSG_INSTANCE_ID, ULTRAMSG_TOKEN, ALERT_WHATSAPP_NUMBER]) or ALERT_WHATSAPP_NUMBER == "<my WhatsApp number with country code, no + or spaces>":
         print("UltraMsg credentials not fully configured. Skipping WhatsApp alert.")
         return
 
+    # Generate one-time lockdown token and build lockdown URL
+    lockdown_token = generate_lockdown_token()
+    lockdown_url = f"{FRONTEND_URL}/emergency-lockdown?token={lockdown_token}"
+
     url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
     
     body = (
-        f"🚨 CRITICAL THREAT DETECTED - Score: {score}/10. "
-        f"Attack path: {path_chain[0]} (Floor {entry_floor}) -> {path_chain[-1]} (Floor {target_floor}). "
-        f"Check Aegis Mission Control dashboard immediately."
+        f"\U0001f6a8 *CRITICAL THREAT DETECTED*\n"
+        f"Score: *{score}/10*\n"
+        f"Attack path: {path_chain[0]} (Floor {entry_floor}) -> {path_chain[-1]} (Floor {target_floor})\n\n"
+        f"\u26a1 *TAP TO EMERGENCY LOCK:*\n"
+        f"{lockdown_url}\n\n"
+        f"\u23f0 Link expires in {LOCKDOWN_TOKEN_TTL_MINUTES} min (one-time use)"
     )
     
     payload = {
@@ -61,6 +101,7 @@ def send_whatsapp_alert(score, path_chain, entry_floor, target_floor):
     # Safely print body to avoid UnicodeEncodeError on Windows consoles with the emoji
     safe_body = body.encode('ascii', 'replace').decode('ascii')
     print(f"DEBUG: Payload to={ALERT_WHATSAPP_NUMBER}, body='{safe_body}'")
+    print(f"DEBUG: Lockdown URL included: {lockdown_url}")
     
     response = requests.post(url, data=payload, timeout=5)
     
@@ -646,6 +687,79 @@ def health():
     })
 
 
+# ── Emergency Lockdown Endpoints ─────────────────────────────────────────────
+
+@app.route("/api/emergency-lockdown", methods=["POST"])
+def emergency_lockdown():
+    """
+    POST /api/emergency-lockdown
+    Body: { "token": "<one-time-token>" }
+    Validates the token and activates emergency lockdown.
+    """
+    global EMERGENCY_LOCKDOWN
+
+    data = request.get_json(silent=True) or {}
+    token = data.get("token") or request.args.get("token", "")
+
+    # Allow dashboard manual lockdown (no token needed)
+    if token == "__dashboard_manual__":
+        EMERGENCY_LOCKDOWN = True
+        print(f"[LOCKDOWN] Emergency lockdown ACTIVATED via dashboard.")
+        return jsonify({
+            "status": "success",
+            "message": "Emergency lockdown activated via dashboard.",
+            "lockdown_active": True,
+            "activated_at": datetime.utcnow().isoformat()
+        })
+
+    is_valid, error_msg = validate_lockdown_token(token)
+    if not is_valid:
+        return jsonify({
+            "status": "error",
+            "message": error_msg,
+            "lockdown_active": EMERGENCY_LOCKDOWN
+        }), 403
+
+    # Mark token as used and activate lockdown
+    LOCKDOWN_TOKENS[token]["used"] = True
+    EMERGENCY_LOCKDOWN = True
+
+    print(f"[LOCKDOWN] Emergency lockdown ACTIVATED via remote token.")
+    return jsonify({
+        "status": "success",
+        "message": "Emergency lockdown activated successfully.",
+        "lockdown_active": True,
+        "activated_at": datetime.utcnow().isoformat()
+    })
+
+
+@app.route("/api/lockdown-status", methods=["GET"])
+def lockdown_status():
+    """
+    GET /api/lockdown-status
+    Returns the current lockdown state so the dashboard can sync.
+    """
+    return jsonify({
+        "lockdown_active": EMERGENCY_LOCKDOWN
+    })
+
+
+@app.route("/api/lockdown-disengage", methods=["POST"])
+def lockdown_disengage():
+    """
+    POST /api/lockdown-disengage
+    Disengages emergency lockdown (called from dashboard).
+    """
+    global EMERGENCY_LOCKDOWN
+    EMERGENCY_LOCKDOWN = False
+    print(f"[LOCKDOWN] Emergency lockdown DISENGAGED.")
+    return jsonify({
+        "status": "success",
+        "message": "Lockdown disengaged.",
+        "lockdown_active": False
+    })
+
+
 @app.route("/", methods=["GET"])
 def index():
     """API index with endpoint documentation."""
@@ -653,13 +767,16 @@ def index():
         "service": "Lateral Movement Detector",
         "version": "1.0.0",
         "endpoints": {
-            "GET /":                       "This help text",
-            "GET /api/health":             "Liveness probe",
-            "GET /api/graph":              "Full device graph (nodes + edges)",
-            "GET /api/attack-paths":       "Top lateral movement candidates",
-            "GET /api/ground-truth":       "Known attack ground-truth",
-            "GET /api/events":             "Filtered event list (?device_id, ?event_type)",
-            "GET /api/device/<device_id>": "Device detail + neighbourhood + events",
+            "GET /":                           "This help text",
+            "GET /api/health":                 "Liveness probe",
+            "GET /api/graph":                  "Full device graph (nodes + edges)",
+            "GET /api/attack-paths":           "Top lateral movement candidates",
+            "GET /api/ground-truth":           "Known attack ground-truth",
+            "GET /api/events":                 "Filtered event list (?device_id, ?event_type)",
+            "GET /api/device/<device_id>":     "Device detail + neighbourhood + events",
+            "POST /api/emergency-lockdown":    "One-tap emergency lockdown (token required)",
+            "GET /api/lockdown-status":        "Current lockdown state",
+            "POST /api/lockdown-disengage":    "Disengage emergency lockdown",
         },
         "attack_paths_params": {
             "window_minutes": f"int, default {DEFAULT_WINDOW_MINUTES}",
